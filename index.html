@@ -521,7 +521,7 @@
                             { year: 2024, title: "An Approximation of the Sex Determination Parameters in the Savanna Side-Necked Turtle Podocnemis vogli (Podocnemididae)", journal: "Chelonian Conservation and Biology" }
                         ]
                     },
-                    { id: 'as3', name: "Viviana Maria Cartagena", role: "Investigadora Asociada", photo: "viviana_cartagena.jpg", bio: "Experta en educación ambiental y conservación comunitaria.", link_cv: "#" },
+                    { id: 'as3', name: "Viviana Maria Cartagena", role: "Investigador Asociado", photo: "viviana_cartagena.jpg", bio: "Experta en educación ambiental y conservación comunitaria.", link_cv: "#" },
                     { 
                         id: 'as4', 
                         name: "Camilo Sánchez Giraldo", 
@@ -543,7 +543,10 @@
                         ]
                     },
                     { id: 'as5', name: "Mateo Rivera", role: "Investigador Asociado", photo: "mateo_rivera.jpg", bio: "Ecología de comunidades de anfibios de alta montaña.", link_cv: "#" },
-                    { id: 'as6', name: "Santiago Varela", role: "Investigador Asociado", photo: "santiago_varela.jpg", bio: "Investigación en historia natural y distribución de reptiles.", link_cv: "#" }
+                    { id: 'as6', name: "Santiago Varela", role: "Investigador Asociado", photo: "santiago_varela.jpg", bio: "Investigación en historia natural y distribución de reptiles.", link_cv: "#" },
+                    { id: 'as7', name: "Daniel Boucanument", role: "Investigador Asociado", photo: "daniel_boucanument.jpg", bio: "Sistemática de Serpientes.", link_cv: "#" },
+                    { id: 'as8', name: "Juan Pablo Hurtado", role: "Investigador Asociado", photo: "juan_hurtado.jpg", bio: "Sistemática de serpientes.", link_cv: "#" },
+                    { id: 'as9', name: "Wilmar Agudelo", role: "Investigador Asociado", photo: "wilmar_agudelo.jpg", bio: "Ecología de Anfibios y reptiles.", link_cv: "#" }
                 ],
                 postgrad: [
                     { 
@@ -588,10 +591,10 @@
                 undergrad: [
                     { name: "Marisol Londoño", bio: "Interés en ecología de anfibios." },
                     { name: "Camilo Gómez", bio: "Taxonomía y sistemática de serpientes." },
-                    { name: "Felipe Barrera Ocampo", bio: "Trabaja con taxonomía y sistemática de reptiles." },
-                    { name: "Katherine Aguirre", bio: "Joven investigadora. Actualmente trabaja con caracteres morfológicos en serpientes." },
                     { name: "Santiago Arango", bio: "Ecoacústica." },
-                    { name: "Carolina Torres", bio: "Genómica y filogenética." }
+                    { name: "Carolina Torres", bio: "Genómica y filogenética." },
+                    { name: "Felipe Barrera Ocampo", bio: "Trabaja con taxonomía y sistemática de reptiles." },
+                    { name: "Katherine Aguirre", bio: "Joven investigadora. Actualmente trabaja con caracteres morfológicos en serpientes." }
                 ]
             },
             research_lines: [
@@ -1020,6 +1023,26 @@
                             ))}
                         </tbody>
                     </table>
+                </div>
+            </div>
+        );
+
+        const NewsView = () => (
+            <div className="container section-padding animate-fade">
+                <h2 className="section-title">Noticias</h2>
+                <div className="grid-responsive">
+                    {GHA_DATA.news.map(item => (
+                        <div key={item.id} className="card">
+                            <div className="card-body">
+                                <span style={{fontSize: '0.8rem', color: '#888', display:'block', marginBottom:'0.5rem'}}>{item.date}</span>
+                                <h3 className="card-title" style={{fontSize:'1.3rem'}}>{item.title}</h3>
+                                <p style={{color:'#555'}}>{item.summary}</p>
+                            </div>
+                            <div className="card-footer">
+                                <button className="btn-outline" style={{padding:'0.25rem 0.75rem', fontSize:'0.8rem', borderRadius:'4px'}}>Leer más</button>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         );

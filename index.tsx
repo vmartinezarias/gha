@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 
@@ -23,8 +24,8 @@ const GHA_DATA = {
         objectives: "El Grupo Herpetológico de Antioquia (GHA) tiene como propósito central formar e incentivar una línea de investigación en herpetología con carácter profesional, competente tanto a nivel nacional como internacional, orientada al desarrollo de estudios básicos y aplicados sobre la biología y conservación de anfibios y reptiles, con énfasis en Antioquia y Colombia. En coherencia con este objetivo general, el grupo busca formar estudiantes de pregrado y posgrado en el área de la herpetología, contribuyendo al fortalecimiento del relevo generacional y de las capacidades científicas del país. Asimismo, el GHA se propone fortalecer de manera permanente la Colección del Museo de Herpetología de la Universidad de Antioquia (MHUA), fomentar el desarrollo tecnológico para el estudio de la fauna y producir conocimiento científico útil y pertinente para la conservación y el manejo de la biodiversidad.\n\nEstos objetivos se articulan de manera directa con la agenda de trabajo del grupo y con las líneas de investigación definidas, integrando formación académica, investigación científica, desarrollo tecnológico y aplicación del conocimiento en contextos de conservación.",
         work_agenda: "En el corto y mediano plazo, el GHA desarrolla una agenda de trabajo estructurada en varios ejes estratégicos. Uno de los principales es la consolidación científica y tecnológica del enfoque ecoacústico, mediante el fortalecimiento de las líneas de bioacústica y ecoacústica. Esto incluye la expansión del banco de datos acústicos, el mejoramiento de herramientas de inteligencia artificial para la detección y clasificación automática de señales, y la integración de información sonora con modelos ecológicos y de paisaje. Se prioriza la generación de repositorios estandarizados y la participación activa en redes regionales de ecoacústica.\n\nOtro eje fundamental es el reforzamiento del Museo de Herpetología de la Universidad de Antioquia (MHUA), a través de la ampliación y curaduría de las colecciones científicas, la digitalización de especímenes, el mejoramiento de la infraestructura de conservación y el fortalecimiento de las prácticas de documentación taxonómica mediante herramientas morfológicas, moleculares y acústicas. Este trabajo contribuye a la actualización del inventario biológico de Antioquia y a la documentación de nuevas especies, en coherencia con las líneas de ecología de anfibios, conservación de reptiles y filogenética molecular.\n\nDe manera complementaria, el grupo avanza en el fortalecimiento de programas de monitoreo poblacional de anfibios y reptiles, desarrollando protocolos estandarizados en sitios priorizados que permitan construir series de tiempo robustas para evaluar fluctuaciones demográficas, impactos antrópicos y respuestas poblacionales. Estos programas integran modelos de ocupación, análisis de historia de vida y variables ambientales, en el marco de la línea de monitoreo de herpetofauna.\n\nFinalmente, el GHA impulsa la gestión de proyectos estratégicos y la consolidación de capacidades internas, promoviendo iniciativas interdisciplinarias asociadas a biogeografía, genética de poblaciones, historia de vida, bioacústica y conservación adaptativa. Paralelamente, se fortalecen las capacidades internas mediante la formación de estudiantes, la oferta de cursos especializados, seminarios permanentes y la vinculación de nuevos investigadores jóvenes.\n\nEn el largo plazo (5 a 10 años), el grupo proyecta su posicionamiento nacional como referente en investigación herpetológica, consolidándose como líder en sistemática, ecología, genética y conservación de anfibios y reptiles en Colombia. Esta proyección incluye el incremento de la producción científica de alto impacto, la formación de talento humano altamente especializado y una mayor incidencia en políticas públicas ambientales y de conservación, en consonancia con lo planteado en el GrupLAC.\n\nAdicionalmente, el GHA busca consolidar redes internacionales de cooperación científica con universidades y centros de investigación de América Latina, Norteamérica y Europa, con el fin de impulsar estudios comparativos en filogenia, biogeografía neotropical, ecoacústica y otras áreas estratégicas. Se prioriza la co-dirección de tesis, el desarrollo de cursos internacionales y la formulación de proyectos colaborativos que superen las barreras actuales en permisos e intercambio científico.\n\nOtro objetivo a largo plazo es el desarrollo de repositorios abiertos y de infraestructura digital, que permitan alojar datos morfológicos, acústicos, genéticos y demográficos de herpetofauna bajo estándares FAIR. Estos repositorios aportarán tanto al MHUA como a plataformas nacionales (SiB Colombia, Instituto Humboldt) y, eventualmente, a redes globales de datos de biodiversidad.\n\nFinalmente, el grupo aspira a fortalecer su incidencia en conservación y manejo adaptativo, generando insumos técnicos y científicos para planes de manejo, políticas públicas y estrategias de conservación de especies amenazadas, incluyendo tortugas de importancia económica, reptiles sensibles y especies de anfibios vulnerables al cambio climático, enfermedades emergentes y transformación del paisaje.",
         research_lines_summary: "El trabajo del Grupo Herpetológico de Antioquia se orienta a través de diversas líneas de investigación articuladas entre sí.\n\nLa línea de Bioacústica y Ecoacústica: desarrolla y aplica herramientas acústicas para el estudio de la biodiversidad, con énfasis en anfibios y reptiles, incluyendo la caracterización de señales acústicas, el uso de índices ecoacústicos, la implementación de técnicas de inteligencia artificial para clasificación automática y la evaluación de patrones espaciales y temporales del paisaje sonoro. Esta línea contribuye tanto a la documentación taxonómica, especialmente de cantos de anuros, como al desarrollo de tecnologías de monitoreo ecológico basadas en sonido.\n\nLa línea de Ecología de Anfibios: comprende estudios sobre historia natural, dinámica poblacional, selección de hábitat, estrategias reproductivas y variación espacial y temporal de poblaciones. Incluye inventarios regionales, descripciones taxonómicas y estudios demográficos de largo plazo, así como análisis de los efectos de condiciones ambientales y presiones antrópicas sobre la distribución y abundancia de las especies.\n\nLa línea de Ecología y Conservación de Reptiles: aborda aspectos ecológicos, demográficos y de conservación de tortugas, lagartos y serpientes, centrándose en el uso del hábitat, movimientos, historia de vida, impactos antrópicos y estrategias de conservación adaptativa. Esta línea apoya procesos de manejo, planes de conservación y evaluaciones de riesgo para reptiles continentales y de importancia económica.\n\nLa línea de Filogenética Molecular y Biogeografía Neotropical: integra datos moleculares, morfológicos y bioacústicos para reconstruir relaciones evolutivas, evaluar procesos de diversificación y comprender patrones biogeográficos de la herpetofauna andina, amazónica y caribeña, contribuyendo a la sistemática y a la descripción de nuevas especies.\n\nLa línea de Genética de Poblaciones de Anfibios y Reptiles se enfoca en el análisis de la estructura genética, conectividad poblacional, flujo génico y variación intraespecífica, incluyendo estudios sobre determinación sexual, adaptación al cambio climático y evaluación de viabilidad poblacional para la toma de decisiones en conservación.\n\nLa línea de Historia de Vida de Tortugas incluye investigaciones sobre reproducción, crecimiento, supervivencia, determinación sexual, movimientos estacionales y dinámica poblacional, orientadas a comprender los factores ecológicos que moldean sus estrategias de vida y a desarrollar acciones de conservación basadas en modelos poblacionales y datos de largo plazo.\n\nFinalmente, la línea de Monitoreo de Anfibios y Reptiles: implementa protocolos estandarizados para el seguimiento temporal y espacial de poblaciones, integrando herramientas morfológicas, moleculares y acústicas, con el fin de detectar fluctuaciones demográficas, evaluar estados de conservación y analizar respuestas a presiones antropogénicas.",
-        group_dynamics: "La dinámica de trabajo del GHA se estructura a partir de diversas actividades complementarias. El grupo realiza reuniones semanales de seguimiento académico y administrativo, en las que se presentan avances de investigación, se discuten resultados, se revisan planes de trabajo y se coordinan actividades de campo, laboratorio, docencia y curaduría del MHUA.\n\nDe manera periódica, se desarrollan salidas de campo para inventarios y monitoreo de anfibios y reptiles en diferentes localidades de Antioquia y regiones cercanas, con el objetivo de recolectar datos ecológicos y acústicos y fortalecer los programas de monitoreo a largo plazo. Estas actividades se complementan con el procesamiento continuo de muestras, datos moleculares y materiales de colección en laboratorio y en el MHUA, incluyendo análisis genéticos, curaduría, actualización de bases de datos y digitalización de registros.\n\nEl grupo también desarrolla y valida herramientas bioacústicas y ecoacústicas para el análisis acústico, la extracción de índices y el procesamiento masivo de datos, apoyando tanto la investigación como el monitoreo. La formación de estudiantes de pregrado y posgrado es una actividad central, mediante la dirección de trabajos de grado, tesis, seminarios, cursos internos y acompañamiento académico permanente.\n\nAsimismo, el GHA promueve la socialización de resultados y la producción académica a través de la participación en congresos y simposios, la elaboración de artículos científicos, informes técnicos, guías metodológicas y actividades de divulgación dirigidas a comunidades locales, instituciones ambientales y la universidad. Finalmente, el grupo impulsa la gestión colaborativa y la formulación de proyectos interinstitucionales, fortaleciendo redes nacionales e internacionales para financiamiento, intercambio académico, movilidad estudiantil y consolidación de repositorios de datos.",
-        conflict_resolution: "El Grupo Herpetológico de Antioquia adopta un enfoque de resolución de conflictos centrado en el diálogo directo, la escucha activa y la restauración de las relaciones, de acuerdo con los principios institucionales de la Universidad de Antioquia y los lineamientos de la Unidad para la Resolución de Conflictos (URC). El conflicto es entendido como una oportunidad para fortalecer la convivencia, mejorar las dinámicas internas y promover ambientes de trabajo respetuosos, inclusivos y orientados al bienestar colectivo, bajo los principios de dignidad humana, buen trato, participación democrática y rigor científico.\n\nAnte la aparición de desacuerdos, se prioriza el diálogo directo entre las partes en un espacio privado, seguro y respetuoso, siguiendo prácticas de comunicación asertiva y empatía. Si este primer acercamiento no permite llegar a un acuerdo, el caso será remitido al coordinador del grupo, quien facilitará una conversación estructurada para identificar hechos, percepciones y posibles soluciones, evitando la escalada de tensiones y respetando el marco normativo universitario.\n\nEn situaciones en las que el conflicto persista o exceda la capacidad de manejo interno, se recurrirá a las instancias universitarias correspondientes, como la Unidad para la Resolución de Conflictos, el Comité de Convivencia Laboral o la Unidad de Asuntos Disciplinarios, garantizando el debido proceso, la proporcionalidad de las intervenciones y la continuidad de los proyectos y compromisos institucionales. El grupo promueve un liderazgo restaurativo, orientado a soluciones colaborativas y al fortalecimiento de una cultura interna de corresponsabilidad y convivencia positiva."
+        group_dynamics: "La dinámica de trabajo del GHA se estructura a partir de diversas actividades complementarias. El grupo realiza reuniones semanales de seguimiento académico y administrativo, en las que se presentan avances de investigación, se discuten resultados, se revisan planes de trabajo y se coordinan actividades de campo, laboratorio, docencia y curaduría del MHUA.\n\nDe manera periódica, se desarrollan salidas de campo para inventarios y monitoreo de anfibios y reptiles en diferentes localidades de Antioquia y regiones cercanas, con el objetivo de recolectar datos ecológicos y acústicos y fortalecer los programas de monitoreo a largo plazo. Estas actividades se complementan con el procesamiento continuo de muestras, datos moleculares y materiales de colección en laboratorio y en el MHUA, incluyendo análisis genéticos, curaduría, actualización de bases de datos y digitalización de registros.\n\nEl grupo también desarrolla y valida herramientas bioacústicas y ecoacústicas para el análisis acústico, la extracción de índices y el procesamiento masivo de datos, apoyando tanto la investigación como el monitoreo. La formación de estudiantes de pregrado y posgrado es una actividad central, mediante la dirección de trabajos de grado, tesis, seminarios, cursos internos y acompañamiento académico permanente.\n\nAsimismo, el GHA promove la socialización de resultados y la producción académica a través de la participación en congresos y simposios, la elaboración de artículos científicos, informes técnicos, guías metodológicas y actividades de divulgación dirigidas a comunidades locales, instituciones ambientales y la universidad. Finalmente, el grupo impulsa la gestión colaborativa y la formulación de proyectos interinstitucionales, fortaleciendo redes nacionales e internacionales para financiamiento, intercambio académico, movilidad estudiantil y consolidación de repositorios de datos.",
+        conflict_resolution: "El Grupo Herpetológico de Antioquia adopta un enfoque de resolución de conflictos centrado en el diálogo directo, la escucha activa y la restauración de las relaciones, de acuerdo con los principios institucionales de la Universidad de Antioquia y los lineamientos de la Unidad para la Resolución de Conflictos (URC). El conflicto es entendido como una oportunidad para fortalecer la convivencia, mejorar las dinámicas internas y promover ambientes de trabajo respetuosos, inclusivos y orientados al bienestar colectivo, bajo los principios de dignidad humana, buen trato, participación democrática y rigor científico.\n\nAnte la aparición de desacuerdos, se prioriza el diálogo directo entre las partes en un espacio privado, seguro y respetuoso, siguiendo prácticas de comunicación asertiva y empatía. Si este primer acercamiento no permite llegar a un acuerdo, el caso será remitido al coordinador del grupo, quien facilitará una conversación estructurada para identificar hechos, percepciones y posibles soluciones, evitando la escalada de tensiones y respetando el marco normativo universitario.\n\nEn situaciones en las que el conflicto persista o exceda la capacidad de manejo interno, se recurrirá a las instancias universitarias correspondientes, como la Unidad para la Resolución de Conflictos, el Comité de Convivencia Laboral o la Unidad de Asuntos Disciplinarios, garantizando el debido proceso, la proporcionalidad de las intervenciones y la continuidad de los proyectos y compromisos institucionales. El grupo promove un liderazgo restaurativo, orientado a soluciones colaborativas y al fortalecimiento de una cultura interna de corresponsabilidad y convivencia positiva."
     },
     statutes: {
         summary: "Nuestros estatutos rigen el comportamiento ético, los procesos de admisión de nuevos miembros y la estructura democrática del grupo.",
@@ -175,7 +176,10 @@ const GHA_DATA = {
                 ]
             },
             { id: 'as5', name: "Mateo Rivera", role: "Investigador Asociado", photo: "mateo_rivera.jpg", bio: "Ecología de comunidades de anfibios de alta montaña.", link_cv: "#" },
-            { id: 'as6', name: "Santiago Varela", role: "Investigador Asociado", photo: "santiago_varela.jpg", bio: "Investigación en historia natural y distribución de reptiles.", link_cv: "#" }
+            { id: 'as6', name: "Santiago Varela", role: "Investigador Asociado", photo: "santiago_varela.jpg", bio: "Investigación en historia natural y distribución de reptiles.", link_cv: "#" },
+            { id: 'as7', name: "Daniel Boucanument", role: "Investigador Asociado", photo: "daniel_boucanument.jpg", bio: "Sistemática de Serpientes.", link_cv: "#" },
+            { id: 'as8', name: "Juan Pablo Hurtado", role: "Investigador Asociado", photo: "juan_hurtado.jpg", bio: "Sistemática de serpientes.", link_cv: "#" },
+            { id: 'as9', name: "Wilmar Agudelo", role: "Investigador Asociado", photo: "wilmar_agudelo.jpg", bio: "Ecología de Anfibios y reptiles.", link_cv: "#" }
         ],
         postgrad: [
             { 
@@ -260,22 +264,25 @@ const GHA_DATA = {
  * ICON SYSTEM
  * --------------------------------------------------------------------------
  */
-const Icons: any = {
-    Menu: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>,
-    Close: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>,
-    MapPin: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>,
-    Email: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>,
-    Facebook: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>,
-    Instagram: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>,
-    Pdf: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>,
-    Leaf: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>,
-    Frog: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="13" r="4"/><path d="M12 5L12 9"/><path d="M15.5 10C16.5 8 18 6 19 6C20.5 6 21 7.5 21 9C21 11 20 12 18 13"/><path d="M8.5 10C7.5 8 6 6 5 6C3.5 6 3 7.5 3 9C3 11 4 12 6 13"/></svg>,
-    ArrowRight: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>,
-    ArrowLeft: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>,
-    Dna: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="M17 12c.57-2.086 2.133-3.533 4.691-4.341"></path><path d="M2 12c.57 2.086 2.133 3.533 4.691 4.341"></path></svg>,
-    Map: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>,
-    ExternalLink: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>,
-    Globe: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+// FIX: Updated all icon components to accept and spread additional props (`...props`)
+// This allows passing props like `style`, `className`, etc., to the underlying SVG element,
+// fixing the error where the `style` prop was not recognized on the `Icons.ArrowLeft` component.
+const Icons = {
+    Menu: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>,
+    Close: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>,
+    MapPin: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>,
+    Email: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>,
+    Facebook: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>,
+    Instagram: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>,
+    Pdf: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>,
+    Leaf: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>,
+    Frog: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><circle cx="12" cy="13" r="4"/><path d="M12 5L12 9"/><path d="M15.5 10C16.5 8 18 6 19 6C20.5 6 21 7.5 21 9C21 11 20 12 18 13"/><path d="M8.5 10C7.5 8 6 6 5 6C3.5 6 3 7.5 3 9C3 11 4 12 6 13"/></svg>,
+    ArrowRight: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>,
+    ArrowLeft: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>,
+    Dna: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="M17 12c.57-2.086 2.133-3.533 4.691-4.341"></path><path d="M2 12c.57 2.086 2.133 3.533 4.691 4.341"></path></svg>,
+    Map: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>,
+    ExternalLink: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>,
+    Globe: ({size=24, color="currentColor", ...props}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
 };
 
 /**
@@ -283,9 +290,9 @@ const Icons: any = {
  * UTILS
  * --------------------------------------------------------------------------
          */
-const handleImageError = (e: any, type = 'nature') => {
+const handleImageError = (e, type = 'nature') => {
     e.target.onerror = null;
-    const keywords: any = {
+    const keywords = {
         'person': 'portrait,researcher',
         'frog': 'frog,amphibian,tropical',
         'nature': 'rainforest,jungle',
@@ -301,7 +308,7 @@ const handleImageError = (e: any, type = 'nature') => {
  * --------------------------------------------------------------------------
  */
 
-const Navbar = ({ activeSection, setSection, mobileMenuOpen, setMobileMenuOpen }: any) => {
+const Navbar = ({ activeSection, setSection, mobileMenuOpen, setMobileMenuOpen }) => {
     const navItems = [
         { id: 'home', label: 'Inicio' },
         { id: 'about', label: 'Nosotros' },
@@ -380,13 +387,21 @@ const Footer = () => (
 
 // --- VIEWS ---
 
-const HomeView = ({ setSection }: any) => (
+const HomeView = ({ setSection }) => (
     <div className="animate-fade">
         <section className="hero" style={{backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(hero_bg.jpg)'}}>
             <img 
                 src="hero_bg.jpg" 
                 style={{display:'none'}} 
-                onError={(e: any) => { e.target.parentElement.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x900/?jungle,reptile')"; }} 
+                // FIX: Correctly handle the onError event.
+                // Replaced `e.target.parentElement` with `e.currentTarget.parentElement`
+                // and added a null check to prevent runtime errors and fix the TypeScript error
+                // `Property 'parentElement' does not exist on type 'EventTarget'`.
+                onError={(e) => { 
+                    if (e.currentTarget.parentElement) {
+                        e.currentTarget.parentElement.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x900/?jungle,reptile')"; 
+                    }
+                }} 
             />
             <div className="container">
                 <h1>GRUPO HERPETOLÓGICO DE ANTIOQUIA</h1>
@@ -455,7 +470,7 @@ const AboutView = () => {
 };
 
 // Componente auxiliar para tarjeta de miembro estándar
-const MemberCard = ({ member, onSelect }: any) => (
+const MemberCard = ({ member, onSelect }) => (
     <div className="card">
         <img 
             src={member.photo} 
@@ -479,7 +494,7 @@ const MemberCard = ({ member, onSelect }: any) => (
     </div>
 );
 
-const MemberProfileView = ({ member, onBack }: any) => {
+const MemberProfileView = ({ member, onBack }) => {
     if (!member) return null;
 
     return (
@@ -504,7 +519,7 @@ const MemberProfileView = ({ member, onBack }: any) => {
                     </div>
                     {member.areas && (
                         <div style={{marginTop: '1rem'}}>
-                            {member.areas.map((area: any, i: number) => <span key={i} className="tag">{area}</span>)}
+                            {member.areas.map((area, i) => <span key={i} className="tag">{area}</span>)}
                         </div>
                     )}
                 </div>
@@ -539,7 +554,7 @@ const MemberProfileView = ({ member, onBack }: any) => {
                 <div>
                     <h3 className="subsection-title">Publicaciones Destacadas</h3>
                     <div className="pub-list">
-                        {member.publications.map((pub: any, idx: number) => (
+                        {member.publications.map((pub, idx) => (
                             <div key={idx} className="pub-item">
                                 <span className="pub-year">{pub.year}</span>
                                 <div className="pub-title">{pub.title}</div>
@@ -553,7 +568,7 @@ const MemberProfileView = ({ member, onBack }: any) => {
     );
 };
 
-const MembersView = ({ onMemberSelect }: any) => (
+const MembersView = ({ onMemberSelect }) => (
     <div className="container section-padding animate-fade">
         <h2 className="section-title">Nuestros Integrantes</h2>
         
@@ -740,7 +755,7 @@ const App = () => {
         window.scrollTo(0, 0);
     }, [activeSection, selectedMember]);
 
-    const handleMemberSelect = (member: any) => {
+    const handleMemberSelect = (member) => {
         setSelectedMember(member);
         setActiveSection('profile');
     };
@@ -759,7 +774,7 @@ const App = () => {
     };
 
     return (
-        <>
+        <React.Fragment>
             <Navbar 
                 activeSection={activeSection} 
                 setSection={setActiveSection}
@@ -770,7 +785,7 @@ const App = () => {
                 {renderSection()}
             </main>
             <Footer />
-        </>
+        </React.Fragment>
     );
 };
 
