@@ -230,9 +230,48 @@ const GHA_DATA = {
         ]
     },
     research_lines: [
-        { id: 1, title: "Ecología y Conservación", description: "Estudio de dinámicas poblacionales y amenazas a especies en peligro.", icon: "Leaf" },
-        { id: 2, title: "Sistemática y Taxonomía", description: "Descripción de nuevas especies y resolución de complejos crípticos.", icon: "Dna" },
-        { id: 3, title: "Biogeografía", description: "Patrones de distribución de la herpetofauna en los Andes.", icon: "Map" }
+        { 
+            id: 'res1', 
+            title: "Bioacústica y Ecoacústica", 
+            description: "Desarrolla y aplica herramientas acústicas para el estudio de la biodiversidad, con énfasis en anfibios y reptiles, incluyendo la caracterización de señales acústicas, el uso de índices ecoacústicos, la implementación de técnicas de inteligencia artificial para clasificación automática y la evaluación de patrones espaciales y temporales del paisaje sonoro. Esta línea contribuye tanto a la documentación taxonómica, especialmente de cantos de anuros, como al desarrollo de tecnologías de monitoreo ecológico basadas en sonido.", 
+            image: "research_acoustics.jpg",
+        },
+        { 
+            id: 'res2', 
+            title: "Ecología de Anfibios", 
+            description: "Comprende estudios sobre historia natural, dinámica poblacional, selección de hábitat, estrategias reproductivas y variación espacial y temporal de poblaciones. Incluye inventarios regionales, descripciones taxonómicas y estudios demográficos de largo plazo, así como análisis de los efectos de condiciones ambientales y presiones antrópicas sobre la distribución y abundancia de las especies.", 
+            image: "research_amphibians.jpg",
+        },
+        { 
+            id: 'res3', 
+            title: "Ecología y Conservación de Reptiles", 
+            description: "Aborda aspectos ecológicos, demográficos y de conservación de tortugas, lagartos y serpientes, centrándose en el uso del hábitat, movimientos, historia de vida, impactos antrópicos y estrategias de conservación adaptativa. Esta línea apoya procesos de manejo, planes de conservación y evaluaciones de riesgo para reptiles continentales y de importancia económica.", 
+            image: "research_reptiles.jpg",
+        },
+        { 
+            id: 'res4', 
+            title: "Filogenética Molecular y Biogeografía Neotropical", 
+            description: "Integra datos moleculares, morfológicos y bioacústicos para reconstruir relaciones evolutivas, evaluar procesos de diversificación y comprender patrones biogeográficos de la herpetofauna andina, amazónica y caribeña, contribuyendo a la sistemática y a la descripción de nuevas especies.", 
+            image: "research_phylogenetics.jpg",
+        },
+        { 
+            id: 'res5', 
+            title: "Genética de Poblaciones de Anfibios y Reptiles", 
+            description: "Se enfoca en el análisis de la estructura genética, conectividad poblacional, flujo génico y variación intraespecífica, incluyendo estudios sobre determinación sexual, adaptación al cambio climático y evaluación de viabilidad poblacional para la toma de decisiones en conservación.", 
+            image: "research_genetics.jpg",
+        },
+        { 
+            id: 'res6', 
+            title: "Historia de Vida de Tortugas", 
+            description: "Incluye investigaciones sobre reproducción, crecimiento, supervivencia, determinación sexual, movimientos estacionales y dinámica poblacional, orientadas a comprender los factores ecológicos que moldean sus estrategias de vida y a desarrollar acciones de conservación basadas en modelos poblacionales y datos de largo plazo.", 
+            image: "research_turtles.jpg",
+        },
+        { 
+            id: 'res7', 
+            title: "Monitoreo de Anfibios y Reptiles", 
+            description: "Implementa protocolos estandarizados para el seguimiento temporal y espacial de poblaciones, integrando herramientas morfológicas, moleculares y acústicas, con el fin de detectar fluctuaciones demográficas, evaluar estados de conservación y analizar respuestas a presiones antropogénicas.", 
+            image: "research_monitoring.jpg",
+        }
     ],
     projects: [
         { title: "Tortugas del Río Magdalena", status: "En curso", funder: "MinCiencias" },
@@ -628,24 +667,29 @@ const MembersView = ({ onMemberSelect }) => (
 
 const ResearchView = () => (
     <div className="container section-padding animate-fade">
-        <h2 className="section-title">Investigación</h2>
-        
-        <div className="grid-responsive" style={{marginBottom:'4rem'}}>
-            {GHA_DATA.research_lines.map(line => {
-                const IconComp = Icons[line.icon] || Icons.Frog;
-                return (
-                    <div key={line.id} className="card" style={{textAlign:'center', padding:'2rem', alignItems:'center'}}>
-                        <div style={{color:'var(--gha-primary)', marginBottom:'1rem', background:'#eef', padding:'1rem', borderRadius:'50%'}}>
-                            <IconComp size={40} />
-                        </div>
-                        <h3 style={{fontSize:'1.2rem'}}>{line.title}</h3>
-                        <p style={{marginTop:'0.5rem', fontSize:'0.9rem'}}>{line.description}</p>
-                    </div>
-                )
-            })}
-        </div>
+        <h2 className="section-title">Líneas de Investigación</h2>
+        <p style={{textAlign: 'center', maxWidth: '800px', margin: '-2rem auto 3rem auto', color: '#555'}}>
+            Nuestro trabajo se articula a través de las siguientes líneas estratégicas, que integran desde la ecología de campo y la sistemática molecular hasta el desarrollo de nuevas tecnologías para el monitoreo de la biodiversidad.
+        </p>
 
-        <h3 style={{marginBottom:'1.5rem'}}>Proyectos Recientes</h3>
+        <div className="grid-responsive" style={{alignItems: 'start'}}>
+            {GHA_DATA.research_lines.map(line => (
+                <div key={line.id} className="card">
+                    <img 
+                        src={line.image}
+                        alt={line.title}
+                        className="card-img"
+                        onError={(e) => handleImageError(e, 'nature')}
+                    />
+                    <div className="card-body">
+                        <h3 className="card-title">{line.title}</h3>
+                        <p style={{fontSize: '0.9rem', color: '#555'}}>{line.description}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+        
+        <h3 className="subsection-title" style={{marginTop:'4rem'}}>Proyectos Recientes</h3>
         <div style={{overflowX: 'auto', background: 'white', borderRadius: '8px', boxShadow: 'var(--shadow)'}}>
             <table style={{width: '100%', borderCollapse: 'collapse', minWidth: '600px'}}>
                 <thead style={{background: 'var(--gha-primary)', color: 'white'}}>
