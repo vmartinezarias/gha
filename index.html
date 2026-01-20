@@ -498,7 +498,7 @@
                             { year: 2025, title: "Estudio poblacional de la tortuga morrocoy de patas rojas (Chelonoidis carbonarius) en áreas con tipos de manejo del paisaje contrastantes en Colombia", journal: "" },
                             { year: 2024, title: "Lessons learned during a 12-year monitoring project with the endangered Magdalena River turtle (Podocnemis lewyana)", journal: "Environmental Monitoring and Assessment 196 (9), 862" },
                             { year: 2023, title: "An Approximation of the Sex Determination Parameters in the Savanna Side-Necked Turtle Podocnemis vogli", journal: "Chelonian Conservation and Biology" },
-                            { year: 2022, title: "Turtles of Colombia: an annotated analysis of their diversity, distribution, and conservación status", journal: "Amphibian & Reptile Conservation 16 (1), 106-135" },
+                            { year: 2022, title: "Turtles of Colombia: an annotated analysis of their diversity, distribution, and conservation status", journal: "Amphibian & Reptile Conservation 16 (1), 106-135" },
                             { year: 2021, title: "Risk of nest flooding in a population of the Magdalena River turtle (Podocnemis lewyana) inhabiting the climatic equator", journal: "" },
                             { year: 2021, title: "Embryo Development and Sex Ratios in the Red-Footed Tortoise (Chelonoidis carbonarius) at Masculinizing Temperatures", journal: "Chelonian Conservation and Biology" },
                             { year: 2020, title: "Demography and habitat use of Caiman crocodilus in two contrasting channels in the middle Magdalena River drainage, Colombia", journal: "Herpetological Conservation and Biology 15 (1), 49-60" },
@@ -520,7 +520,7 @@
                             { year: 2025, title: "Life history characteristics of the Colombian Wood Turtle, Rhinoclemmys melanosterna, in the middle Magdalena River", journal: "Herpetology Notes" },
                             { year: 2024, title: "Lessons learned during a 12-year monitoring project with the endangered Magdalena River turtle (Podocnemis lewyana)", journal: "Environmental Monitoring and Assessment" },
                             { year: 2024, title: "An Approximation of the Sex Determination Parameters in the Savanna Side-Necked Turtle Podocnemis vogli", journal: "Chelonian Conservation and Biology" },
-                            { year: 2022, title: "Turtles of Colombia: an annotated analysis of their diversity, distribution, and conservación status", journal: "Amphibian & Reptile Conservation" },
+                            { year: 2022, title: "Turtles of Colombia: an annotated analysis of their diversity, distribution, and conservation status", journal: "Amphibian & Reptile Conservation" },
                             { year: 2021, title: "Risk of Nest Flooding in a Population of the Magdalena River Turtle Inhabiting the Climatic Equator", journal: "Journal of Herpetology" },
                             { year: 2021, title: "Current and Historical Genetic Structure of the White-Footed Tamarin (Saguinus leucopus)", journal: "Chapter" },
                             { year: 2020, title: "Demography and Habitat Use of Caiman crocodilus in two Contrasting Channels in the Middle Magdalena River", journal: "Herpetological Conservation and Biology" },
@@ -591,7 +591,7 @@
                             { year: 2025, title: "Letting ecosystems speak for themselves: An unsupervised methodology for mapping landscape acoustic heterogeneity", journal: "Environmental Modelling & Software" },
                             { year: 2025, title: "What is essential is invisible to the eyes: a conservation approach for poison frogs (Dendrobatidae)", journal: "Biodiversity and Conservation" },
                             { year: 2024, title: "Built vs. Green cover: an unequal struggle for urban space in Medellín (Colombia)", journal: "Urban Ecosystems" },
-                            { year: 2024, title: "Living on the EDGE: From the evolutionary uniqueness to the conservación status of the Colombian elapids", journal: "The Herpetological Journal" }
+                            { year: 2024, title: "Living on the EDGE: From the evolutionary uniqueness to the conservation status of the Colombian elapids", journal: "The Herpetological Journal" }
                         ]
                     },
                     { 
@@ -823,7 +823,11 @@
                     <img 
                         src="hero_bg.jpg" 
                         style={{display:'none'}} 
-                        onError={(e) => { e.target.parentElement.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x900/?jungle,reptile')"; }} 
+                        onError={(e) => { 
+                            if (e.currentTarget.parentElement) {
+                                e.currentTarget.parentElement.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x900/?jungle,reptile')"; 
+                            }
+                        }} 
                     />
                     <div className="container">
                         <h1>GRUPO HERPETOLÓGICO DE ANTIOQUIA</h1>
@@ -916,14 +920,13 @@
             </div>
         );
 
-        // Nueva Vista de Perfil
         const MemberProfileView = ({ member, onBack }) => {
             if (!member) return null;
 
             return (
                 <div className="container section-padding animate-fade">
                     <button onClick={onBack} className="btn-outline" style={{marginBottom: '2rem', padding: '0.5rem 1rem'}}>
-                         <Icons.ArrowLeft size={16} style={{marginRight: '5px'}}/> Volver a integrantes
+                            <Icons.ArrowLeft size={16} style={{marginRight: '5px'}}/> Volver a integrantes
                     </button>
 
                     <div className="profile-header">
@@ -947,29 +950,29 @@
                             )}
                         </div>
                     </div>
-                    
+
                     {/* Sección de Resumen de Trayectoria */}
                     {member.profile_desc && (
                         <div style={{marginBottom: '3rem', background: 'white', padding: '2rem', borderRadius: '8px', boxShadow: 'var(--shadow)'}}>
-                             <h3 className="subsection-title" style={{marginTop: 0}}>Trayectoria Académica</h3>
-                             <p style={{fontSize: '1.05rem', color: '#444'}}>{member.profile_desc}</p>
-                             <div style={{display:'flex', gap:'1rem', flexWrap:'wrap', marginTop: '1.5rem'}}>
-                                {member.google_scholar && (
-                                    <a href={member.google_scholar} target="_blank" className="btn" style={{display: 'inline-flex', gap: '0.5rem', alignItems: 'center'}}>
-                                        Google Scholar <Icons.ExternalLink size={18} />
-                                    </a>
-                                )}
-                                {member.website && (
-                                    <a href={member.website} target="_blank" className="btn btn-outline" style={{display: 'inline-flex', gap: '0.5rem', alignItems: 'center'}}>
-                                        Sitio Web <Icons.Globe size={18} />
-                                    </a>
-                                )}
-                                {member.orcid && (
-                                    <a href={member.orcid} target="_blank" className="btn btn-outline" style={{display: 'inline-flex', gap: '0.5rem', alignItems: 'center'}}>
-                                        ORCID <Icons.ExternalLink size={18} />
-                                    </a>
-                                )}
-                             </div>
+                                <h3 className="subsection-title" style={{marginTop: 0}}>Trayectoria Académica</h3>
+                                <p style={{fontSize: '1.05rem', color: '#444'}}>{member.profile_desc}</p>
+                                <div style={{display:'flex', gap:'1rem', flexWrap:'wrap', marginTop: '1.5rem'}}>
+                                    {member.google_scholar && (
+                                        <a href={member.google_scholar} target="_blank" className="btn" style={{display: 'inline-flex', gap: '0.5rem', alignItems: 'center'}}>
+                                            Google Scholar <Icons.ExternalLink size={18} />
+                                        </a>
+                                    )}
+                                    {member.website && (
+                                        <a href={member.website} target="_blank" className="btn btn-outline" style={{display: 'inline-flex', gap: '0.5rem', alignItems: 'center'}}>
+                                            Sitio Web <Icons.Globe size={18} />
+                                        </a>
+                                    )}
+                                    {member.orcid && (
+                                        <a href={member.orcid} target="_blank" className="btn btn-outline" style={{display: 'inline-flex', gap: '0.5rem', alignItems: 'center'}}>
+                                            ORCID <Icons.ExternalLink size={18} />
+                                        </a>
+                                    )}
+                                </div>
                         </div>
                     )}
 
@@ -1221,5 +1224,8 @@
         const root = ReactDOM.createRoot(container);
         root.render(<App />);
     </script>
+    
+    <script>window.aichatbotApiKey="fa83dc89-93c7-43a8-883e-d3e2b48c4708"; window.aichatbotProviderId="f9e9c5e4-6d1a-4b8c-8d3f-3f9e9c5e46d1";</script><script src="https://script.chatlab.com/aichatbot.js" id="fa83dc89-93c7-43a8-883e-d3e2b48c4708" defer></script>
 </body>
 </html>
+--- END OF FILE index.html ---
