@@ -509,7 +509,7 @@ const AboutView = () => {
 
 // Componente auxiliar para tarjeta de miembro estándar
 const MemberCard = ({ member, onSelect }) => (
-    <div className="card">
+    <div className="card member-card">
         <img 
             src={member.photo} 
             alt={member.name} 
