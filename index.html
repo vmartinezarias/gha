@@ -287,6 +287,15 @@
         .animate-fade { animation: fadeIn 0.5s ease-in; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
 </head>
 <body>
     <div id="root"></div>
@@ -592,7 +601,7 @@
                 </div>
                 <div className="card-footer">
                     <a href={member.link_cv} style={{color: 'var(--gha-primary)', fontWeight:'bold', display:'flex', alignItems:'center', gap:'0.25rem'}}>
-                        Ver CvLAC <Icons.ArrowRight size={16} />
+                        Más información <Icons.ArrowRight size={16} />
                     </a>
                 </div>
             </div>
@@ -767,4 +776,48 @@
             // Dynamic Theme Switching based on section
             useEffect(() => {
                 if (activeSection === 'mhua') {
-                    document.body.classList.
+                    document.body.classList.add('mhua-theme');
+                } else {
+                    document.body.classList.remove('mhua-theme');
+                }
+            }, [activeSection]);
+
+            // Scroll to top on section change
+            useEffect(() => {
+                window.scrollTo(0, 0);
+            }, [activeSection]);
+
+            const renderSection = () => {
+                switch(activeSection) {
+                    case 'home': return <HomeView setSection={setActiveSection} />;
+                    case 'about': return <AboutView />;
+                    case 'members': return <MembersView />;
+                    case 'research': return <ResearchView />;
+                    case 'news': return <NewsView />;
+                    case 'mhua': return <MHUAView />;
+                    default: return <HomeView setSection={setActiveSection} />;
+                }
+            };
+
+            return (
+                <React.Fragment>
+                    <Navbar 
+                        activeSection={activeSection} 
+                        setSection={setActiveSection}
+                        mobileMenuOpen={mobileMenuOpen}
+                        setMobileMenuOpen={setMobileMenuOpen}
+                    />
+                    <main style={{minHeight: '80vh'}}>
+                        {renderSection()}
+                    </main>
+                    <Footer />
+                </React.Fragment>
+            );
+        };
+
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+    </script>
+</body>
+</html>

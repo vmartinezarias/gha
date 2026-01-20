@@ -273,7 +273,7 @@ const MembersView = () => (
                     </div>
                     <div className="card-footer">
                         <a href={member.link_cv} style={{color: 'var(--gha-primary)', fontWeight:'bold', display:'flex', alignItems:'center', gap:'0.25rem'}}>
-                            Ver CvLAC <Icons.ArrowRight size={16} />
+                            Más información <Icons.ArrowRight size={16} />
                         </a>
                     </div>
                 </div>
