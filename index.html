@@ -101,11 +101,26 @@
             content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
             width: 60px; height: 4px; background-color: var(--gha-earth);
         }
+        
+        .subsection-title {
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--gha-accent);
+            padding-left: 1rem;
+            color: var(--gha-dark);
+        }
 
         .grid-responsive { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
             gap: 2rem; 
+        }
+        
+        .grid-compact {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
         }
 
         /* --- COMPONENTS --- */
@@ -198,6 +213,24 @@
         .card-subtitle { color: var(--gha-accent); font-size: 0.9rem; margin-bottom: 10px; font-weight: 600; display: block; }
         .card-footer { padding: 15px 20px; border-top: 1px solid #eee; background: #fcfcfc; font-size: 0.9rem; }
 
+        /* Small Card for Undergrads */
+        .card-small {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+        .card-small:hover { transform: translateY(-3px); }
+        .card-small-img {
+            width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;
+            border: 2px solid var(--gha-earth);
+        }
+
         /* Feature / Species Highlight */
         .feature-box {
             background-color: var(--white);
@@ -217,9 +250,11 @@
         body.mhua-theme .nav-logo, 
         body.mhua-theme h1, 
         body.mhua-theme h2, 
-        body.mhua-theme .card-title {
+        body.mhua-theme .card-title,
+        body.mhua-theme .subsection-title {
             color: var(--mhua-primary) !important;
         }
+        body.mhua-theme .subsection-title { border-color: var(--mhua-primary); }
         body.mhua-theme .nav-item.active::after { background: var(--mhua-primary); }
         body.mhua-theme .nav-item:hover, 
         body.mhua-theme .nav-item.active { color: var(--mhua-primary); }
@@ -252,15 +287,6 @@
         .animate-fade { animation: fadeIn 0.5s ease-in; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/"
-  }
-}
-</script>
 </head>
 <body>
     <div id="root"></div>
@@ -294,12 +320,42 @@
                 summary: "Nuestros estatutos rigen el comportamiento ético, los procesos de admisión de nuevos miembros y la estructura democrática del grupo.",
                 link: "#"
             },
-            members: [
-                { id: 1, name: "Dra. Vivian Páez", role: "Directora & Fundadora", photo: "vivian_paez.jpg", bio: "Experta en ecología de tortugas continentales y biología de la conservación.", link_cv: "#" },
-                { id: 2, name: "Dr. Brian Bock", role: "Investigador Senior", photo: "brian_bock.jpg", bio: "Especialista en comportamiento animal y evolución de lagartos.", link_cv: "#" },
-                { id: 3, name: "MSc. Juan Camilo Arredondo", role: "Curador Asociado", photo: "juan_arredondo.jpg", bio: "Taxonomía y sistemática de saurios neotropicales.", link_cv: "#" },
-                { id: 4, name: "Est. Ana María Pérez", role: "Estudiante Doctorado", photo: "ana_perez.jpg", bio: "Investigando vocalizaciones en ranas de cristal.", link_cv: "#" }
-            ],
+            // --- NUEVA ESTRUCTURA DE INTEGRANTES ---
+            members: {
+                direction: [
+                    { id: 'd1', name: "Juan Manuel Daza Rojas", role: "Director", photo: "juan_daza.jpg", bio: "Profesor del Instituto de Biología. Experto en sistemática, filogeografía y evolución de anfibios y reptiles neotropicales.", link_cv: "#" },
+                    { id: 'd2', name: "Mauricio Correa", role: "Codirector", photo: "mauricio_correa.jpg", bio: "Investigador enfocado en ecología de poblaciones y conservación de herpetofauna en ecosistemas andinos.", link_cv: "#" }
+                ],
+                admin: [
+                    { id: 'a1', name: "Ana Londoño", role: "Apoyo Administrativo", photo: "ana_londono.jpg", bio: "Gestora administrativa encargada de la coordinación logística y el soporte operativo de los proyectos del grupo.", link_cv: "#" }
+                ],
+                emeritus: [
+                    { id: 'e1', name: "Vivian Páez", role: "Investigadora Emérita", photo: "vivian_paez.jpg", bio: "Fundadora del grupo. Pionera en el estudio de la ecología de tortugas continentales en Colombia y biología de la conservación.", link_cv: "#" },
+                    { id: 'e2', name: "Brian Bock", role: "Investigador Emérito", photo: "brian_bock.jpg", bio: "Profesor jubilado con una vasta trayectoria en comportamiento animal, demografía y evolución de iguánidos.", link_cv: "#" }
+                ],
+                associates: [
+                    { id: 'as1', name: "Carlos Marín", role: "Investigador Asociado", photo: "carlos_marin.jpg", bio: "Especialista en bioacústica y taxonomía de anfibios.", link_cv: "#" },
+                    { id: 'as2', name: "Johana Pérez-Mira", role: "Investigadora Asociada", photo: "johana_perez.jpg", bio: "Investigadora en ecología funcional y diversidad.", link_cv: "#" },
+                    { id: 'as3', name: "Viviana Maria Cartagena", role: "Investigadora Asociada", photo: "viviana_cartagena.jpg", bio: "Experta en educación ambiental y conservación comunitaria.", link_cv: "#" },
+                    { id: 'as4', name: "Camilo Sánchez Giraldo", role: "Investigador Asociado", photo: "camilo_sanchez.jpg", bio: "Estudios en genética de poblaciones y evolución.", link_cv: "#" },
+                    { id: 'as5', name: "Mateo Rivera", role: "Investigador Asociado", photo: "mateo_rivera.jpg", bio: "Ecología de comunidades de anfibios de alta montaña.", link_cv: "#" },
+                    { id: 'as6', name: "Santiago Varela", role: "Investigador Asociado", photo: "santiago_varela.jpg", bio: "Investigación en historia natural y distribución de reptiles.", link_cv: "#" }
+                ],
+                postgrad: [
+                    { id: 'pg1', name: "Víctor M. Martínez-Arias", role: "Estudiante Doctorado", photo: "victor_martinez.jpg", bio: "Investigando procesos evolutivos y diversificación en anfibios de los Andes.", link_cv: "#" },
+                    { id: 'pg2', name: "Carolina Paniagua-Villada", role: "Estudiante Maestría", photo: "carolina_paniagua.jpg", bio: "Ecología espacial y uso de hábitat en serpientes.", link_cv: "#" },
+                    { id: 'pg3', name: "Yeison Tolosa", role: "Estudiante Maestría", photo: "yeison_tolosa.jpg", bio: "Sistemática molecular y taxonomía integrativa.", link_cv: "#" },
+                    { id: 'pg4', name: "Freddy Alexander Grisales", role: "Estudiante Maestría", photo: "freddy_grisales.jpg", bio: "Biogeografía y modelos de nicho ecológico.", link_cv: "#" }
+                ],
+                undergrad: [
+                    "Marisol Londoño",
+                    "Camilo Gómez",
+                    "Felipe Barrera Ocampo",
+                    "Katherine",
+                    "Santiago Arango",
+                    "Carolina Torres"
+                ]
+            },
             research_lines: [
                 { id: 1, title: "Ecología y Conservación", description: "Estudio de dinámicas poblacionales y amenazas a especies en peligro.", icon: "Leaf" },
                 { id: 2, title: "Sistemática y Taxonomía", description: "Descripción de nuevas especies y resolución de complejos crípticos.", icon: "Dna" },
@@ -520,31 +576,78 @@
             </div>
         );
 
+        // Componente auxiliar para tarjeta de miembro estándar
+        const MemberCard = ({ member }) => (
+            <div className="card">
+                <img 
+                    src={member.photo} 
+                    alt={member.name} 
+                    className="card-img"
+                    onError={(e) => handleImageError(e, 'person')}
+                />
+                <div className="card-body">
+                    <h3 className="card-title">{member.name}</h3>
+                    <span className="card-subtitle">{member.role}</span>
+                    <p style={{fontSize: '0.9rem', color: '#555'}}>{member.bio}</p>
+                </div>
+                <div className="card-footer">
+                    <a href={member.link_cv} style={{color: 'var(--gha-primary)', fontWeight:'bold', display:'flex', alignItems:'center', gap:'0.25rem'}}>
+                        Ver CvLAC <Icons.ArrowRight size={16} />
+                    </a>
+                </div>
+            </div>
+        );
+
         const MembersView = () => (
             <div className="container section-padding animate-fade">
-                <h2 className="section-title">Integrantes</h2>
+                <h2 className="section-title">Nuestros Integrantes</h2>
+                
+                <h3 className="subsection-title">Dirección del Grupo</h3>
                 <div className="grid-responsive">
-                    {GHA_DATA.members.map(member => (
-                        <div key={member.id} className="card">
+                    {GHA_DATA.members.direction.map(m => <MemberCard key={m.id} member={m} />)}
+                </div>
+
+                <h3 className="subsection-title">Apoyo Administrativo</h3>
+                <div className="grid-responsive">
+                    {GHA_DATA.members.admin.map(m => <MemberCard key={m.id} member={m} />)}
+                </div>
+
+                <h3 className="subsection-title">Investigadores Eméritos</h3>
+                <div className="grid-responsive">
+                    {GHA_DATA.members.emeritus.map(m => <MemberCard key={m.id} member={m} />)}
+                </div>
+                
+                <h3 className="subsection-title">Investigadores Asociados</h3>
+                <div className="grid-responsive">
+                    {GHA_DATA.members.associates.map(m => <MemberCard key={m.id} member={m} />)}
+                </div>
+
+                <h3 className="subsection-title">Estudiantes de Posgrado</h3>
+                <div className="grid-responsive">
+                    {GHA_DATA.members.postgrad.map(m => <MemberCard key={m.id} member={m} />)}
+                </div>
+
+                <h3 className="subsection-title">Estudiantes de Pregrado</h3>
+                <div className="grid-compact" style={{background: 'white', padding: '2rem', borderRadius: '8px', boxShadow: 'var(--shadow)'}}>
+                    {GHA_DATA.members.undergrad.map((name, idx) => (
+                        <div key={idx} className="card-small">
                             <img 
-                                src={member.photo} 
-                                alt={member.name} 
-                                className="card-img"
+                                src={`ug_${idx}.jpg`} 
+                                className="card-small-img" 
+                                alt={name}
                                 onError={(e) => handleImageError(e, 'person')}
                             />
-                            <div className="card-body">
-                                <h3 className="card-title">{member.name}</h3>
-                                <span className="card-subtitle">{member.role}</span>
-                                <p style={{fontSize: '0.9rem', color: '#555'}}>{member.bio}</p>
-                            </div>
-                            <div className="card-footer">
-                                <a href={member.link_cv} style={{color: 'var(--gha-primary)', fontWeight:'bold', display:'flex', alignItems:'center', gap:'0.25rem'}}>
-                                    Ver CvLAC <Icons.ArrowRight size={16} />
-                                </a>
-                            </div>
+                            <h4 style={{fontSize:'1rem', margin:0}}>{name}</h4>
+                            <span style={{fontSize:'0.8rem', color:'#666'}}>Pregrado</span>
                         </div>
                     ))}
+                    <div className="card-small" style={{background: 'var(--gha-primary)', color:'white', justifyContent:'center'}}>
+                         <p style={{fontSize:'0.9rem'}}>¡Únete a nuestro semillero!</p>
+                    </div>
                 </div>
+                <p style={{textAlign:'center', marginTop:'1rem', color:'#666', fontStyle:'italic'}}>
+                    Nuestros estudiantes de pregrado son el corazón del semillero, participando activamente en salidas de campo, curaduría y proyectos de investigación.
+                </p>
             </div>
         );
 
@@ -664,48 +767,4 @@
             // Dynamic Theme Switching based on section
             useEffect(() => {
                 if (activeSection === 'mhua') {
-                    document.body.classList.add('mhua-theme');
-                } else {
-                    document.body.classList.remove('mhua-theme');
-                }
-            }, [activeSection]);
-
-            // Scroll to top on section change
-            useEffect(() => {
-                window.scrollTo(0, 0);
-            }, [activeSection]);
-
-            const renderSection = () => {
-                switch(activeSection) {
-                    case 'home': return <HomeView setSection={setActiveSection} />;
-                    case 'about': return <AboutView />;
-                    case 'members': return <MembersView />;
-                    case 'research': return <ResearchView />;
-                    case 'news': return <NewsView />;
-                    case 'mhua': return <MHUAView />;
-                    default: return <HomeView setSection={setActiveSection} />;
-                }
-            };
-
-            return (
-                <React.Fragment>
-                    <Navbar 
-                        activeSection={activeSection} 
-                        setSection={setActiveSection}
-                        mobileMenuOpen={mobileMenuOpen}
-                        setMobileMenuOpen={setMobileMenuOpen}
-                    />
-                    <main style={{minHeight: '80vh'}}>
-                        {renderSection()}
-                    </main>
-                    <Footer />
-                </React.Fragment>
-            );
-        };
-
-        const container = document.getElementById('root');
-        const root = ReactDOM.createRoot(container);
-        root.render(<App />);
-    </script>
-</body>
-</html>
+                    document.body.classList.
