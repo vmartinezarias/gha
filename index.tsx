@@ -79,7 +79,15 @@ const GHA_DATA = {
             }
         ],
         admin: [
-            { id: 'a1', name: "Ana Londoño", role: "Apoyo Administrativo", photo: "ana_londono.jpg", bio: "Gestora administrativa encargada de la coordinación logística y el soporte operativo de los proyectos del grupo.", link_cv: "#" }
+            { 
+                id: 'a1', 
+                name: "Ana Londoño", 
+                role: "Asistente de Curaduría", 
+                photo: "ana_londono.jpg", 
+                bio: "Estudiante de Biología. Actualmente en la línea de investigación de Sistemática y taxonomía. Asistente de Curaduría del Museo de Herpetología Universidad de Antioquia. No sé qué más poner jajaja.", 
+                profile_desc: "Estudiante de Biología. Actualmente en la línea de investigación de Sistemática y taxonomía. Asistente de Curaduría del Museo de Herpetología Universidad de Antioquia. No sé qué más poner jajaja.",
+                link_cv: "#" 
+            }
         ],
         emeritus: [
             { id: 'e1', name: "Vivian Páez", role: "Investigadora Emérita", photo: "vivian_paez.jpg", bio: "Fundadora del grupo. Pionera en el estudio de la ecología de tortugas continentales en Colombia y biología de la conservación.", link_cv: "#" },
