@@ -90,30 +90,127 @@ const GHA_DATA = {
             }
         ],
         emeritus: [
-            { id: 'e1', name: "Vivian Páez", role: "Investigadora Emérita", photo: "vivian_paez.jpg", bio: "Fundadora del grupo. Pionera en el estudio de la ecología de tortugas continentales en Colombia y biología de la conservación.", link_cv: "#" },
-            { id: 'e2', name: "Brian Bock", role: "Investigador Emérito", photo: "brian_bock.jpg", bio: "Profesor jubilado con una vasta trayectoria en comportamiento animal, demografía y evolución de iguánidos.", link_cv: "#" }
+            { 
+                id: 'e1', 
+                name: "Vivian Páez", 
+                role: "Investigadora Emérita", 
+                photo: "vivian_paez.jpg", 
+                bio: "Fundadora del grupo. Distinguida como Profesora Emérita por su legado en la conservación de tortugas continentales y ecología de poblaciones.", 
+                education: "PhD, Ohio University",
+                areas: ["Population Ecology", "Herpetology", "Conservation Biology", "Turtles"],
+                google_scholar: "https://scholar.google.com/citations?hl=es&user=ov0ddhYAAAAJ&view_op=list_works&authuser=2&sortby=pubdate",
+                profile_desc: "Reconocida como Profesora Emérita de la Universidad de Antioquia, Vivian Páez ha dedicado más de 26 años a la docencia y la investigación, siendo pilar fundamental en la fundación y consolidación del Laboratorio y Museo de Herpetología. Conocida como la 'guardiana de las tortugas', su trayectoria académica incluye un doctorado en la Universidad de Ohio y estancias en el Smithsonian Institution. Su investigación se centra en la ecología de poblaciones y la conservación de tortugas continentales, labor por la cual ha recibido galardones internacionales de prestigio como el Andrew Sabin Conservation Prize (2013) y el Premio de Conservación de Tortugas Behler (2022). Ha publicado 11 libros y cerca de 70 artículos científicos, enfocando sus esfuerzos recientes en especies amenazadas como Podocnemis lewyana.",
+                publications: [
+                    { year: 2025, title: "Life history characteristics of the Colombian Wood Turtle, Rhinoclemmys melanosterna (Gray, 1861), in the middle Magdalena River, Colombia", journal: "Herpetology Notes 18, 921–930" },
+                    { year: 2025, title: "Estudio poblacional de la tortuga morrocoy de patas rojas (Chelonoidis carbonarius) en áreas con tipos de manejo del paisaje contrastantes en Colombia", journal: "" },
+                    { year: 2024, title: "Lessons learned during a 12-year monitoring project with the endangered Magdalena River turtle (Podocnemis lewyana)", journal: "Environmental Monitoring and Assessment 196 (9), 862" },
+                    { year: 2023, title: "An Approximation of the Sex Determination Parameters in the Savanna Side-Necked Turtle Podocnemis vogli", journal: "Chelonian Conservation and Biology" },
+                    { year: 2022, title: "Turtles of Colombia: an annotated analysis of their diversity, distribution, and conservation status", journal: "Amphibian & Reptile Conservation 16 (1), 106-135" },
+                    { year: 2021, title: "Risk of nest flooding in a population of the Magdalena River turtle (Podocnemis lewyana) inhabiting the climatic equator", journal: "" },
+                    { year: 2021, title: "Embryo Development and Sex Ratios in the Red-Footed Tortoise (Chelonoidis carbonarius) at Masculinizing Temperatures", journal: "Chelonian Conservation and Biology" },
+                    { year: 2020, title: "Demography and habitat use of Caiman crocodilus in two contrasting channels in the middle Magdalena River drainage, Colombia", journal: "Herpetological Conservation and Biology 15 (1), 49-60" },
+                    { year: 2020, title: "Linear Home Range and Seasonal Movements of Podocnemis lewyana in the Magdalena River, Colombia", journal: "Copeia 108 (1), 29-38" },
+                    { year: 2016, title: "V. Biología y conservación de las tortugas continentales de Colombia", journal: "Serie Recursos Hidrobiológicos y Pesqueros Continentales" }
+                ]
+            },
+            { 
+                id: 'e2', 
+                name: "Brian Bock", 
+                role: "Investigador Emérito", 
+                photo: "brian_bock.jpg", 
+                bio: "Profesor jubilado. Estudia comportamiento, ecología, demografía y genética de poblaciones de reptiles y otras especies.", 
+                education: "PhD in Zoology",
+                areas: ["Zoology", "Evolutionary Biology", "Population Genetics", "Herpetology", "Animal Behavior"],
+                profile_desc: "Brian Bock es Ph.D. y Profesor Jubilado del Instituto de Biología de la Universidad de Antioquia. Con una destacada carrera en Zoología y Biología Evolutiva, su investigación se ha centrado en desentrañar aspectos clave del comportamiento, la ecología, la demografía y la genética de poblaciones de la herpetofauna neotropical. Ha realizado aportes significativos al conocimiento de la biología de la iguana verde (Iguana iguana) y diversas especies de tortugas continentales, contribuyendo activamente a su conservación.",
+                google_scholar: "https://www.researchgate.net/profile/Brian-Bock-3", 
+                publications: [
+                    { year: 2025, title: "Life history characteristics of the Colombian Wood Turtle, Rhinoclemmys melanosterna, in the middle Magdalena River", journal: "Herpetology Notes" },
+                    { year: 2024, title: "Lessons learned during a 12-year monitoring project with the endangered Magdalena River turtle (Podocnemis lewyana)", journal: "Environmental Monitoring and Assessment" },
+                    { year: 2024, title: "An Approximation of the Sex Determination Parameters in the Savanna Side-Necked Turtle Podocnemis vogli", journal: "Chelonian Conservation and Biology" },
+                    { year: 2022, title: "Turtles of Colombia: an annotated analysis of their diversity, distribution, and conservation status", journal: "Amphibian & Reptile Conservation" },
+                    { year: 2021, title: "Risk of Nest Flooding in a Population of the Magdalena River Turtle Inhabiting the Climatic Equator", journal: "Journal of Herpetology" },
+                    { year: 2021, title: "Current and Historical Genetic Structure of the White-Footed Tamarin (Saguinus leucopus)", journal: "Chapter" },
+                    { year: 2020, title: "Demography and Habitat Use of Caiman crocodilus in two Contrasting Channels in the Middle Magdalena River", journal: "Herpetological Conservation and Biology" },
+                    { year: 2020, title: "Linear Home Range and Seasonal Movements of Podocnemis lewyana in the Magdalena River, Colombia", journal: "Copeia" },
+                    { year: 2018, title: "Iguana iguana. The IUCN Red List of Threatened Species", journal: "Technical Report" },
+                    { year: 2017, title: "Meta-análisis de la historia del estudio de las tortugas continentales de Colombia", journal: "Acta Biológica Colombiana" }
+                ]
+            }
         ],
         associates: [
             { id: 'as1', name: "Carlos Marín", role: "Investigador Asociado", photo: "carlos_marin.jpg", bio: "Especialista en bioacústica y taxonomía de anfibios.", link_cv: "#" },
             { id: 'as2', name: "Johana Pérez-Mira", role: "Investigadora Asociada", photo: "johana_perez.jpg", bio: "Investigadora en ecología funcional y diversidad.", link_cv: "#" },
             { id: 'as3', name: "Viviana Maria Cartagena", role: "Investigadora Asociada", photo: "viviana_cartagena.jpg", bio: "Experta en educación ambiental y conservación comunitaria.", link_cv: "#" },
-            { id: 'as4', name: "Camilo Sánchez Giraldo", role: "Investigador Asociado", photo: "camilo_sanchez.jpg", bio: "Estudios en genética de poblaciones y evolución.", link_cv: "#" },
+            { 
+                id: 'as4', 
+                name: "Camilo Sánchez Giraldo", 
+                role: "Investigador Asociado", 
+                photo: "camilo_sanchez.jpg", 
+                bio: "Primer graduado de Doctorado en Biología del GHA. Especialista en ecoacústica y monitoreo de biodiversidad mediante paisajes sonoros.", 
+                education: "Ph.D. en Biología, Universidad de Antioquia",
+                areas: ["Ecoacoustics", "Soundscape Ecology", "Machine Learning", "Biodiversity Monitoring"],
+                profile_desc: "Camilo Sánchez Giraldo es un hito para el Grupo Herpetológico de Antioquia al convertirse en su primer graduado del Doctorado en Biología. Su tesis doctoral se enfocó en la ecoacústica, desarrollando metodologías innovadoras no supervisadas para mapear la heterogeneidad acústica del paisaje y utilizar el sonido ambiental como un espejo de la integridad ecológica. Su trabajo combina ecología, tecnología y aprendizaje automático para entender cómo los paisajes transformados afectan la comunicación animal y la biodiversidad.",
+                google_scholar: "https://www.researchgate.net/profile/Camilo-Sanchez-Giraldo/research",
+                publications: [
+                    { year: 2025, title: "Graphical representation of landscape heterogeneity identification through unsupervised acoustic analysis", journal: "Methods in Ecology and Evolution" },
+                    { year: 2025, title: "Letting ecosystems speak for themselves: An unsupervised methodology for mapping landscape acoustic heterogeneity", journal: "Environmental Modelling & Software" },
+                    { year: 2024, title: "Quantifying and mitigating recorder-induced variability in ecological acoustic indices", journal: "Ecological Informatics" },
+                    { year: 2024, title: "Soundscape Characterization Using Autoencoders and Unsupervised Learning", journal: "Sensors" },
+                    { year: 2022, title: "Hábitat y espectro acústico como factores determinantes de la ocupación de anuros neotropicales", journal: "Biota Colombiana" },
+                    { year: 2021, title: "Environmental sound as a mirror of landscape ecological integrity in monitoring programs", journal: "Perspectives in Ecology and Conservation" },
+                    { year: 2020, title: "Ecoacoustics in the rain: understanding acoustic indices under the most common geophonic source in tropical rainforests", journal: "Remote Sensing in Ecology and Conservation" }
+                ]
+            },
             { id: 'as5', name: "Mateo Rivera", role: "Investigador Asociado", photo: "mateo_rivera.jpg", bio: "Ecología de comunidades de anfibios de alta montaña.", link_cv: "#" },
             { id: 'as6', name: "Santiago Varela", role: "Investigador Asociado", photo: "santiago_varela.jpg", bio: "Investigación en historia natural y distribución de reptiles.", link_cv: "#" }
         ],
         postgrad: [
-            { id: 'pg1', name: "Víctor M. Martínez-Arias", role: "Estudiante Doctorado", photo: "victor_martinez.jpg", bio: "Investigando procesos evolutivos y diversificación en anfibios de los Andes.", link_cv: "#" },
-            { id: 'pg2', name: "Carolina Paniagua-Villada", role: "Estudiante Maestría", photo: "carolina_paniagua.jpg", bio: "Ecología espacial y uso de hábitat en serpientes.", link_cv: "#" },
+            { 
+                id: 'pg1', 
+                name: "Víctor M. Martínez-Arias", 
+                role: "Estudiante Doctorado", 
+                photo: "victor_martinez.jpg", 
+                bio: "Biólogo, MSc. y candidato a Doctor en Biología. Experto en ecoacústica, ecología espacial y conservación.", 
+                education: "Biólogo (UdeA), MSc. Bosques y Conservación (UNAL), PhD Student (UdeA)",
+                areas: ["Ecoacoustics", "Landscape Ecology", "GIS", "Mammalogy", "Conservation"],
+                profile_desc: "Biólogo, MSc. y candidato a Doctor en Biología, con experiencia en ecoacústica, ecología espacial y del paisaje, mastozología, biología de la conservación y ecología animal. Especializado en la recolección, procesamiento y análisis de datos, incluyendo estadística multivariada y espacial, así como en el manejo, adquisición y producción de datos SIG y el análisis de conectividad ecológica. Posee habilidades en manejo de bases de datos, escritura científica y coordinación de equipos de trabajo.",
+                google_scholar: "https://scholar.google.com/citations?user=wfx4nqIAAAAJ&hl=es&authuser=2",
+                website: "https://vmartinezarias.github.io/Victor_Martinez-Arias/",
+                orcid: "https://orcid.org/0000-0002-3328-130X",
+                publications: [
+                    { year: 2026, title: "Echolocation Pulses of the Endemic Bat Saccopteryx antioquensis (Emballonuridae) in Antioquia, Colombia", journal: "Journal article" },
+                    { year: 2025, title: "A workflow to optimize spatial sampling in ecoacoustic studies", journal: "Research Square (Preprint)" },
+                    { year: 2025, title: "Letting ecosystems speak for themselves: An unsupervised methodology for mapping landscape acoustic heterogeneity", journal: "Environmental Modelling & Software" },
+                    { year: 2025, title: "What is essential is invisible to the eyes: a conservation approach for poison frogs (Dendrobatidae)", journal: "Biodiversity and Conservation" },
+                    { year: 2024, title: "Built vs. Green cover: an unequal struggle for urban space in Medellín (Colombia)", journal: "Urban Ecosystems" },
+                    { year: 2024, title: "Living on the EDGE: From the evolutionary uniqueness to the conservation status of the Colombian elapids", journal: "The Herpetological Journal" }
+                ]
+            },
+            { 
+                id: 'pg2', 
+                name: "Carolina Paniagua-Villada", 
+                role: "Estudiante Maestría", 
+                photo: "carolina_paniagua.jpg", 
+                bio: "Ingeniera ambiental (UNAL). Investigadora en ecoacústica, ecología del paisaje y análisis espacial (SIG).", 
+                education: "Ingeniera Ambiental (UNAL), Maestría en Biología (En curso)",
+                areas: ["Landscape Ecology", "Ecoacoustics", "GIS", "Urban Ecosystems"],
+                profile_desc: "Ingeniera Ambiental de la UNAL y estudiante de Maestría en Biología. Su investigación integra la ecoacústica y la ecología del paisaje utilizando herramientas SIG avanzadas. Cuenta con amplia experiencia profesional en la estructuración de proyectos de conservación, análisis de conectividad ecológica funcional y estructural, y caracterización de paisajes sonoros. Ha colaborado con entidades como la Sociedad Antioqueña de Ornitología y la Secretaría de Medio Ambiente de La Estrella en la gestión de ecosistemas estratégicos.",
+                google_scholar: "https://www.researchgate.net/profile/Carolina-Paniagua-Villada",
+                publications: [
+                    { year: 2025, title: "A workflow to optimize spatial sampling in ecoacoustic studies", journal: "Preprint" },
+                    { year: 2024, title: "Built vs. Green cover: an unequal struggle for urban space in Medellín (Colombia)", journal: "Urban Ecosystems" }
+                ]
+            },
             { id: 'pg3', name: "Yeison Tolosa", role: "Estudiante Maestría", photo: "yeison_tolosa.jpg", bio: "Sistemática molecular y taxonomía integrativa.", link_cv: "#" },
             { id: 'pg4', name: "Freddy Alexander Grisales", role: "Estudiante Maestría", photo: "freddy_grisales.jpg", bio: "Biogeografía y modelos de nicho ecológico.", link_cv: "#" }
         ],
         undergrad: [
-            "Marisol Londoño",
-            "Camilo Gómez",
-            "Felipe Barrera Ocampo",
-            "Katherine",
-            "Santiago Arango",
-            "Carolina Torres"
+            { name: "Marisol Londoño", bio: "Interés en ecología de anfibios." },
+            { name: "Camilo Gómez", bio: "Taxonomía y sistemática de serpientes." },
+            { name: "Santiago Arango", bio: "Ecoacústica." },
+            { name: "Carolina Torres", bio: "Genómica y filogenética." },
+            { name: "Felipe Barrera Ocampo", bio: "Trabaja con taxonomía y sistemática de reptiles." },
+            { name: "Katherine Aguirre", bio: "Joven investigadora. Actualmente trabaja con caracteres morfológicos en serpientes." }
         ]
     },
     research_lines: [
@@ -164,14 +261,15 @@ const Icons: any = {
     ArrowLeft: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>,
     Dna: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 15c6.667-6 13.333 0 20-6"></path><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path><path d="M17 12c.57-2.086 2.133-3.533 4.691-4.341"></path><path d="M2 12c.57 2.086 2.133 3.533 4.691 4.341"></path></svg>,
     Map: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>,
-    ExternalLink: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+    ExternalLink: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>,
+    Globe: ({size=24, color="currentColor"}) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
 };
 
 /**
  * --------------------------------------------------------------------------
  * UTILS
  * --------------------------------------------------------------------------
- */
+         */
 const handleImageError = (e: any, type = 'nature') => {
     e.target.onerror = null;
     const keywords: any = {
@@ -399,11 +497,23 @@ const MemberProfileView = ({ member, onBack }: any) => {
                 <div style={{marginBottom: '3rem', background: 'white', padding: '2rem', borderRadius: '8px', boxShadow: 'var(--shadow)'}}>
                         <h3 className="subsection-title" style={{marginTop: 0}}>Trayectoria Académica</h3>
                         <p style={{fontSize: '1.05rem', color: '#444'}}>{member.profile_desc}</p>
-                        {member.google_scholar && (
-                            <a href={member.google_scholar} target="_blank" className="btn" style={{marginTop: '1.5rem', display: 'inline-flex', gap: '0.5rem', alignItems: 'center'}}>
-                            Ver en Google Scholar <Icons.ExternalLink size={18} />
-                            </a>
-                        )}
+                        <div style={{display:'flex', gap:'1rem', flexWrap:'wrap', marginTop: '1.5rem'}}>
+                            {member.google_scholar && (
+                                <a href={member.google_scholar} target="_blank" className="btn" style={{display: 'inline-flex', gap: '0.5rem', alignItems: 'center'}}>
+                                    Google Scholar <Icons.ExternalLink size={18} />
+                                </a>
+                            )}
+                            {member.website && (
+                                <a href={member.website} target="_blank" className="btn btn-outline" style={{display: 'inline-flex', gap: '0.5rem', alignItems: 'center'}}>
+                                    Sitio Web <Icons.Globe size={18} />
+                                </a>
+                            )}
+                            {member.orcid && (
+                                <a href={member.orcid} target="_blank" className="btn btn-outline" style={{display: 'inline-flex', gap: '0.5rem', alignItems: 'center'}}>
+                                    ORCID <Icons.ExternalLink size={18} />
+                                </a>
+                            )}
+                        </div>
                 </div>
             )}
 
@@ -456,20 +566,26 @@ const MembersView = ({ onMemberSelect }: any) => (
 
         <h3 className="subsection-title">Estudiantes de Pregrado</h3>
         <div className="grid-compact" style={{background: 'white', padding: '2rem', borderRadius: '8px', boxShadow: 'var(--shadow)'}}>
-            {GHA_DATA.members.undergrad.map((name, idx) => (
+            {GHA_DATA.members.undergrad.map((member, idx) => (
                 <div key={idx} className="card-small">
                     <img 
                         src={`ug_${idx}.jpg`} 
                         className="card-small-img" 
-                        alt={name}
+                        alt={member.name}
                         onError={(e) => handleImageError(e, 'person')}
                     />
-                    <h4 style={{fontSize:'1rem', margin:0}}>{name}</h4>
-                    <span style={{fontSize:'0.8rem', color:'#666'}}>Pregrado</span>
+                    <h4 style={{fontSize:'1rem', margin:0}}>{member.name}</h4>
+                    <span style={{fontSize:'0.8rem', color:'var(--gha-accent)', fontWeight:'600'}}>Pregrado</span>
+                    <p style={{fontSize:'0.85rem', color:'#555', marginTop:'0.5rem', lineHeight:'1.3'}}>{member.bio}</p>
                 </div>
             ))}
-            <div className="card-small" style={{background: 'var(--gha-primary)', color:'white', justifyContent:'center'}}>
-                 <p style={{fontSize:'0.9rem'}}>¡Únete a nuestro semillero!</p>
+            <div 
+                className="card-small" 
+                style={{background: 'var(--gha-primary)', color:'white', justifyContent:'center', cursor: 'pointer'}}
+                onClick={() => alert("Reuniones en el laboratorio de Herpetología, 7-121 a las 14:00 horas todos los lunes.")}
+            >
+                 <p style={{fontSize:'1rem', fontWeight:'bold'}}>¡Asiste a nuestras reuniones!</p>
+                 <span style={{fontSize:'0.8rem', opacity: 0.8}}>(Click para info)</span>
             </div>
         </div>
         <p style={{textAlign:'center', marginTop:'1rem', color:'#666', fontStyle:'italic'}}>
