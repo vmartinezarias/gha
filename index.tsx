@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 
@@ -19,16 +18,18 @@ const GHA_DATA = {
             twitter: "#"
         }
     },
-    sections: {
-        history: "El GHA nació en 1998 como una iniciativa estudiantil en la Universidad de Antioquia. A lo largo de más de dos décadas, nos hemos consolidado como un referente en la investigación y conservación de anfibios y reptiles en los Andes tropicales.",
-        mission: "Promover el conocimiento, la conservación y el uso sostenible de la biodiversidad de anfibios y reptiles a través de la investigación científica rigurosa.",
-        vision: "Ser reconocidos internacionalmente como un grupo líder en investigación herpetológica, cuyos aportes científicos fundamenten estrategias efectivas de conservación."
+    about_us: {
+        history: "El Grupo Herpetológico de Antioquia (GHA) nació en 1997 en la Universidad de Antioquia, bajo el liderazgo de la profesora Vivian P. Páez y el impulso de un grupo de estudiantes interesados en caracterizar la fauna de anfibios y reptiles de la región. Desde sus inicios, el grupo se propuso desarrollar investigaciones sistemáticas sobre la herpetofauna de Antioquia y áreas cercanas, dando origen al Museo Herpetológico de Antioquia (MHUA), hoy reconocido como un referente nacional.\n\nA lo largo de su desarrollo, el GHA amplió progresivamente su misión y alcance, consolidándose como uno de los grupos de investigación más productivos en herpetología en Colombia. El MHUA se convirtió en un pilar fundamental del grupo, albergando una extensa colección de ejemplares que sirve como recurso para estudiantes e investigadores nacionales e internacionales y como centro de referencia científica.\n\nEl impacto del GHA se refleja en su liderazgo en publicaciones científicas, con numerosos artículos en revistas indexadas internacionales, y en la diversidad de áreas de investigación que abordan la taxonomía, ecología, genética, morfología y conservación de anfibios y reptiles. En conjunto, el GHA ha pasado de ser una iniciativa estudiantil a consolidarse como un referente nacional e internacional en el estudio y conservación de la herpetofauna, gracias a su trabajo sostenido, su compromiso con la formación académica y la creación de un museo científico de alto valor para el país.\n\nEn años recientes, y en coherencia con tendencias internacionales y necesidades de monitoreo en ecosistemas transformados, el grupo incorporó y consolidó un componente de bioacústica y ecoacústica como enfoque complementario y estratégico. Este avance ha permitido caracterizar señales acústicas (especialmente cantos de anuros), fortalecer repositorios de datos sonoros, desarrollar herramientas tecnológicas y de inteligencia artificial para detección y clasificación automática, e integrar la información acústica con modelos ecológicos y de paisaje para apoyar procesos de monitoreo, evaluación ambiental y conservación.",
+        objectives: "El Grupo Herpetológico de Antioquia (GHA) tiene como propósito central formar e incentivar una línea de investigación en herpetología con carácter profesional, competente tanto a nivel nacional como internacional, orientada al desarrollo de estudios básicos y aplicados sobre la biología y conservación de anfibios y reptiles, con énfasis en Antioquia y Colombia. En coherencia con este objetivo general, el grupo busca formar estudiantes de pregrado y posgrado en el área de la herpetología, contribuyendo al fortalecimiento del relevo generacional y de las capacidades científicas del país. Asimismo, el GHA se propone fortalecer de manera permanente la Colección del Museo de Herpetología de la Universidad de Antioquia (MHUA), fomentar el desarrollo tecnológico para el estudio de la fauna y producir conocimiento científico útil y pertinente para la conservación y el manejo de la biodiversidad.\n\nEstos objetivos se articulan de manera directa con la agenda de trabajo del grupo y con las líneas de investigación definidas, integrando formación académica, investigación científica, desarrollo tecnológico y aplicación del conocimiento en contextos de conservación.",
+        work_agenda: "En el corto y mediano plazo, el GHA desarrolla una agenda de trabajo estructurada en varios ejes estratégicos. Uno de los principales es la consolidación científica y tecnológica del enfoque ecoacústico, mediante el fortalecimiento de las líneas de bioacústica y ecoacústica. Esto incluye la expansión del banco de datos acústicos, el mejoramiento de herramientas de inteligencia artificial para la detección y clasificación automática de señales, y la integración de información sonora con modelos ecológicos y de paisaje. Se prioriza la generación de repositorios estandarizados y la participación activa en redes regionales de ecoacústica.\n\nOtro eje fundamental es el reforzamiento del Museo de Herpetología de la Universidad de Antioquia (MHUA), a través de la ampliación y curaduría de las colecciones científicas, la digitalización de especímenes, el mejoramiento de la infraestructura de conservación y el fortalecimiento de las prácticas de documentación taxonómica mediante herramientas morfológicas, moleculares y acústicas. Este trabajo contribuye a la actualización del inventario biológico de Antioquia y a la documentación de nuevas especies, en coherencia con las líneas de ecología de anfibios, conservación de reptiles y filogenética molecular.\n\nDe manera complementaria, el grupo avanza en el fortalecimiento de programas de monitoreo poblacional de anfibios y reptiles, desarrollando protocolos estandarizados en sitios priorizados que permitan construir series de tiempo robustas para evaluar fluctuaciones demográficas, impactos antrópicos y respuestas poblacionales. Estos programas integran modelos de ocupación, análisis de historia de vida y variables ambientales, en el marco de la línea de monitoreo de herpetofauna.\n\nFinalmente, el GHA impulsa la gestión de proyectos estratégicos y la consolidación de capacidades internas, promoviendo iniciativas interdisciplinarias asociadas a biogeografía, genética de poblaciones, historia de vida, bioacústica y conservación adaptativa. Paralelamente, se fortalecen las capacidades internas mediante la formación de estudiantes, la oferta de cursos especializados, seminarios permanentes y la vinculación de nuevos investigadores jóvenes.\n\nEn el largo plazo (5 a 10 años), el grupo proyecta su posicionamiento nacional como referente en investigación herpetológica, consolidándose como líder en sistemática, ecología, genética y conservación de anfibios y reptiles en Colombia. Esta proyección incluye el incremento de la producción científica de alto impacto, la formación de talento humano altamente especializado y una mayor incidencia en políticas públicas ambientales y de conservación, en consonancia con lo planteado en el GrupLAC.\n\nAdicionalmente, el GHA busca consolidar redes internacionales de cooperación científica con universidades y centros de investigación de América Latina, Norteamérica y Europa, con el fin de impulsar estudios comparativos en filogenia, biogeografía neotropical, ecoacústica y otras áreas estratégicas. Se prioriza la co-dirección de tesis, el desarrollo de cursos internacionales y la formulación de proyectos colaborativos que superen las barreras actuales en permisos e intercambio científico.\n\nOtro objetivo a largo plazo es el desarrollo de repositorios abiertos y de infraestructura digital, que permitan alojar datos morfológicos, acústicos, genéticos y demográficos de herpetofauna bajo estándares FAIR. Estos repositorios aportarán tanto al MHUA como a plataformas nacionales (SiB Colombia, Instituto Humboldt) y, eventualmente, a redes globales de datos de biodiversidad.\n\nFinalmente, el grupo aspira a fortalecer su incidencia en conservación y manejo adaptativo, generando insumos técnicos y científicos para planes de manejo, políticas públicas y estrategias de conservación de especies amenazadas, incluyendo tortugas de importancia económica, reptiles sensibles y especies de anfibios vulnerables al cambio climático, enfermedades emergentes y transformación del paisaje.",
+        research_lines_summary: "El trabajo del Grupo Herpetológico de Antioquia se orienta a través de diversas líneas de investigación articuladas entre sí.\n\nLa línea de Bioacústica y Ecoacústica: desarrolla y aplica herramientas acústicas para el estudio de la biodiversidad, con énfasis en anfibios y reptiles, incluyendo la caracterización de señales acústicas, el uso de índices ecoacústicos, la implementación de técnicas de inteligencia artificial para clasificación automática y la evaluación de patrones espaciales y temporales del paisaje sonoro. Esta línea contribuye tanto a la documentación taxonómica, especialmente de cantos de anuros, como al desarrollo de tecnologías de monitoreo ecológico basadas en sonido.\n\nLa línea de Ecología de Anfibios: comprende estudios sobre historia natural, dinámica poblacional, selección de hábitat, estrategias reproductivas y variación espacial y temporal de poblaciones. Incluye inventarios regionales, descripciones taxonómicas y estudios demográficos de largo plazo, así como análisis de los efectos de condiciones ambientales y presiones antrópicas sobre la distribución y abundancia de las especies.\n\nLa línea de Ecología y Conservación de Reptiles: aborda aspectos ecológicos, demográficos y de conservación de tortugas, lagartos y serpientes, centrándose en el uso del hábitat, movimientos, historia de vida, impactos antrópicos y estrategias de conservación adaptativa. Esta línea apoya procesos de manejo, planes de conservación y evaluaciones de riesgo para reptiles continentales y de importancia económica.\n\nLa línea de Filogenética Molecular y Biogeografía Neotropical: integra datos moleculares, morfológicos y bioacústicos para reconstruir relaciones evolutivas, evaluar procesos de diversificación y comprender patrones biogeográficos de la herpetofauna andina, amazónica y caribeña, contribuyendo a la sistemática y a la descripción de nuevas especies.\n\nLa línea de Genética de Poblaciones de Anfibios y Reptiles se enfoca en el análisis de la estructura genética, conectividad poblacional, flujo génico y variación intraespecífica, incluyendo estudios sobre determinación sexual, adaptación al cambio climático y evaluación de viabilidad poblacional para la toma de decisiones en conservación.\n\nLa línea de Historia de Vida de Tortugas incluye investigaciones sobre reproducción, crecimiento, supervivencia, determinación sexual, movimientos estacionales y dinámica poblacional, orientadas a comprender los factores ecológicos que moldean sus estrategias de vida y a desarrollar acciones de conservación basadas en modelos poblacionales y datos de largo plazo.\n\nFinalmente, la línea de Monitoreo de Anfibios y Reptiles: implementa protocolos estandarizados para el seguimiento temporal y espacial de poblaciones, integrando herramientas morfológicas, moleculares y acústicas, con el fin de detectar fluctuaciones demográficas, evaluar estados de conservación y analizar respuestas a presiones antropogénicas.",
+        group_dynamics: "La dinámica de trabajo del GHA se estructura a partir de diversas actividades complementarias. El grupo realiza reuniones semanales de seguimiento académico y administrativo, en las que se presentan avances de investigación, se discuten resultados, se revisan planes de trabajo y se coordinan actividades de campo, laboratorio, docencia y curaduría del MHUA.\n\nDe manera periódica, se desarrollan salidas de campo para inventarios y monitoreo de anfibios y reptiles en diferentes localidades de Antioquia y regiones cercanas, con el objetivo de recolectar datos ecológicos y acústicos y fortalecer los programas de monitoreo a largo plazo. Estas actividades se complementan con el procesamiento continuo de muestras, datos moleculares y materiales de colección en laboratorio y en el MHUA, incluyendo análisis genéticos, curaduría, actualización de bases de datos y digitalización de registros.\n\nEl grupo también desarrolla y valida herramientas bioacústicas y ecoacústicas para el análisis acústico, la extracción de índices y el procesamiento masivo de datos, apoyando tanto la investigación como el monitoreo. La formación de estudiantes de pregrado y posgrado es una actividad central, mediante la dirección de trabajos de grado, tesis, seminarios, cursos internos y acompañamiento académico permanente.\n\nAsimismo, el GHA promueve la socialización de resultados y la producción académica a través de la participación en congresos y simposios, la elaboración de artículos científicos, informes técnicos, guías metodológicas y actividades de divulgación dirigidas a comunidades locales, instituciones ambientales y la universidad. Finalmente, el grupo impulsa la gestión colaborativa y la formulación de proyectos interinstitucionales, fortaleciendo redes nacionales e internacionales para financiamiento, intercambio académico, movilidad estudiantil y consolidación de repositorios de datos.",
+        conflict_resolution: "El Grupo Herpetológico de Antioquia adopta un enfoque de resolución de conflictos centrado en el diálogo directo, la escucha activa y la restauración de las relaciones, de acuerdo con los principios institucionales de la Universidad de Antioquia y los lineamientos de la Unidad para la Resolución de Conflictos (URC). El conflicto es entendido como una oportunidad para fortalecer la convivencia, mejorar las dinámicas internas y promover ambientes de trabajo respetuosos, inclusivos y orientados al bienestar colectivo, bajo los principios de dignidad humana, buen trato, participación democrática y rigor científico.\n\nAnte la aparición de desacuerdos, se prioriza el diálogo directo entre las partes en un espacio privado, seguro y respetuoso, siguiendo prácticas de comunicación asertiva y empatía. Si este primer acercamiento no permite llegar a un acuerdo, el caso será remitido al coordinador del grupo, quien facilitará una conversación estructurada para identificar hechos, percepciones y posibles soluciones, evitando la escalada de tensiones y respetando el marco normativo universitario.\n\nEn situaciones en las que el conflicto persista o exceda la capacidad de manejo interno, se recurrirá a las instancias universitarias correspondientes, como la Unidad para la Resolución de Conflictos, el Comité de Convivencia Laboral o la Unidad de Asuntos Disciplinarios, garantizando el debido proceso, la proporcionalidad de las intervenciones y la continuidad de los proyectos y compromisos institucionales. El grupo promueve un liderazgo restaurativo, orientado a soluciones colaborativas y al fortalecimiento de una cultura interna de corresponsabilidad y convivencia positiva."
     },
     statutes: {
         summary: "Nuestros estatutos rigen el comportamiento ético, los procesos de admisión de nuevos miembros y la estructura democrática del grupo.",
         link: "#"
     },
-    // --- NUEVA ESTRUCTURA DE INTEGRANTES ---
     members: {
         direction: [
             { 
@@ -84,8 +85,8 @@ const GHA_DATA = {
                 name: "Ana Londoño", 
                 role: "Asistente de Curaduría", 
                 photo: "ana_londono.jpg", 
-                bio: "Estudiante de Biología. Actualmente en la línea de investigación de Sistemática y taxonomía. Asistente de Curaduría del Museo de Herpetología Universidad de Antioquia. No sé qué más poner jajaja.", 
-                profile_desc: "Estudiante de Biología. Actualmente en la línea de investigación de Sistemática y taxonomía. Asistente de Curaduría del Museo de Herpetología Universidad de Antioquia. No sé qué más poner jajaja.",
+                bio: "Estudiante de Biología. Actualmente en la línea de investigación de Sistemática y taxonomía. Asistente de Curaduría del Museo de Herpetología Universidad de Antioquia.", 
+                profile_desc: "Estudiante de Biología. Actualmente en la línea de investigación de Sistemática y taxonomía. Asistente de Curaduría del Museo de Herpetología Universidad de Antioquia.",
                 link_cv: "#" 
             }
         ],
@@ -139,7 +140,19 @@ const GHA_DATA = {
         ],
         associates: [
             { id: 'as1', name: "Carlos Marín", role: "Investigador Asociado", photo: "carlos_marin.jpg", bio: "Especialista en bioacústica y taxonomía de anfibios.", link_cv: "#" },
-            { id: 'as2', name: "Johana Pérez-Mira", role: "Investigadora Asociada", photo: "johana_perez.jpg", bio: "Investigadora en ecología funcional y diversidad.", link_cv: "#" },
+            { 
+                id: 'as2', 
+                name: "Johana Pérez-Mira", 
+                role: "Investigadora Asociada", 
+                photo: "johana_perez.jpg", 
+                bio: "Bióloga (UdeA). Herpetóloga consultora con énfasis en conservación de tortugas y parasitología de anfibios.", 
+                education: "Bióloga, Universidad de Antioquia (2024)",
+                areas: ["Turtle Conservation", "Herpetology", "Parasitology", "Environmental Consulting"],
+                profile_desc: "Bióloga graduada de la Universidad de Antioquia. Se desempeña como herpetóloga independiente y consultora ambiental, con experiencia en el manejo de fauna silvestre. Su trayectoria investigativa abarca la conservación y monitoreo de tortugas marinas y continentales (destacando su labor en COPROT, Costa Rica), así como el estudio de ectoparásitos en anfibios. Ha participado como Joven Investigadora en el laboratorio de genética animal.",
+                publications: [
+                    { year: 2024, title: "An Approximation of the Sex Determination Parameters in the Savanna Side-Necked Turtle Podocnemis vogli (Podocnemididae)", journal: "Chelonian Conservation and Biology" }
+                ]
+            },
             { id: 'as3', name: "Viviana Maria Cartagena", role: "Investigadora Asociada", photo: "viviana_cartagena.jpg", bio: "Experta en educación ambiental y conservación comunitaria.", link_cv: "#" },
             { 
                 id: 'as4', 
@@ -406,35 +419,40 @@ const HomeView = ({ setSection }: any) => (
     </div>
 );
 
-const AboutView = () => (
-    <div className="container section-padding animate-fade">
-        <h2 className="section-title">Quiénes Somos</h2>
-        
-        <div className="grid-responsive" style={{marginBottom: '4rem'}}>
-            <div>
-                <h3>Nuestra Historia</h3>
-                <p style={{marginTop: '1rem'}}>{GHA_DATA.sections.history}</p>
-            </div>
-            <div style={{backgroundColor: 'white', padding: '2rem', borderRadius: '8px', boxShadow: 'var(--shadow)'}}>
-                <div style={{marginBottom: '2rem'}}>
-                    <h3>Misión</h3>
-                    <p>{GHA_DATA.sections.mission}</p>
-                </div>
-                <div>
-                    <h3>Visión</h3>
-                    <p>{GHA_DATA.sections.vision}</p>
-                </div>
-            </div>
-        </div>
+const AboutView = () => {
+    const aboutContent = [
+        { title: 'Historia y Trayectoria', content: GHA_DATA.about_us.history },
+        { title: 'Objetivos del Grupo', content: GHA_DATA.about_us.objectives },
+        { title: 'Agenda de Trabajo', content: GHA_DATA.about_us.work_agenda },
+        { title: 'Líneas de Investigación', content: GHA_DATA.about_us.research_lines_summary },
+        { title: 'Dinámica del Grupo', content: GHA_DATA.about_us.group_dynamics },
+        { title: 'Mecanismos para la Solución de Conflictos', content: GHA_DATA.about_us.conflict_resolution },
+    ];
 
-        <div className="text-center" style={{background:'#e8e8e8', padding:'3rem', borderRadius:'8px'}}>
-            <Icons.Pdf size={48} color="var(--gha-primary)" />
-            <h3 style={{marginTop:'1rem'}}>Estatutos del GHA</h3>
-            <p style={{maxWidth:'600px', margin:'1rem auto'}}>{GHA_DATA.statutes.summary}</p>
-            <a href={GHA_DATA.statutes.link} className="btn">Descargar PDF</a>
+    return (
+        <div className="container section-padding animate-fade">
+            <h2 className="section-title">Sobre Nosotros</h2>
+            
+            <div className="about-content-wrapper">
+                {aboutContent.map(section => (
+                    <div key={section.title} style={{marginBottom: '2.5rem'}}>
+                        <h3 className="subsection-title" style={{marginTop: 0, marginBottom: '1rem'}}>{section.title}</h3>
+                        {section.content.split('\n\n').map((paragraph, index) => (
+                            <p key={index} style={{marginBottom: '1rem', color: '#444'}}>{paragraph}</p>
+                        ))}
+                    </div>
+                ))}
+            </div>
+
+            <div className="text-center" style={{background:'#e8e8e8', padding:'3rem', borderRadius:'8px', marginTop: '4rem'}}>
+                <Icons.Pdf size={48} color="var(--gha-primary)" />
+                <h3 style={{marginTop:'1rem'}}>Estatutos del GHA</h3>
+                <p style={{maxWidth:'600px', margin:'1rem auto'}}>{GHA_DATA.statutes.summary}</p>
+                <a href={GHA_DATA.statutes.link} className="btn">Descargar PDF</a>
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
 // Componente auxiliar para tarjeta de miembro estándar
 const MemberCard = ({ member, onSelect }: any) => (
