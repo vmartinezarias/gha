@@ -11,7 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
+    <!-- React & ReactDOM (UMD - Globals) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <!-- Babel Standalone -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <style>
         /* --- VARIABLES CSS --- */
         :root {
@@ -371,23 +377,20 @@
         .animate-fade { animation: fadeIn 0.5s ease-in; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
-    
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://esm.sh/react@18.2.0",
-        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-        "react-dom/": "https://esm.sh/react-dom@18.2.0/",
-        "react/": "https://esm.sh/react@18.2.0/"
-      }
-    }
-    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
 </head>
 <body>
     <div id="root"></div>
-    
-    <!-- This script tag is essential for loading the React application -->
-    <script type="module" src="./index.jsx"></script>
+
+    <script type="module" src="index.tsx"></script>
     
     <script>window.aichatbotApiKey="fa83dc89-93c7-43a8-883e-d3e2b48c4708"; window.aichatbotProviderId="f9e9c5e4-6d1a-4b8c-8d3f-3f9e9c5e46d1";</script><script src="https://script.chatlab.com/aichatbot.js" id="fa83dc89-93c7-43a8-883e-d3e2b48c4708" defer></script>
 </body>

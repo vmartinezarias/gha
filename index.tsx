@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 
@@ -227,7 +226,7 @@ const GHA_DATA = {
             { name: "Santiago Arango", bio: "Ecoacústica." },
             { name: "Carolina Torres", bio: "Genómica y filogenética." },
             { name: "Felipe Barrera Ocampo", bio: "Trabaja con taxonomía y sistemática de reptiles." },
-            { name: "Katerine Rodríguez", bio: "Joven investigadora. Actualmente trabaja con caracteres morfológicos en serpientes." }
+            { name: "Katherine Aguirre", bio: "Joven investigadora. Actualmente trabaja con caracteres morfológicos en serpientes." }
         ]
     },
     research_lines: [
