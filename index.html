@@ -15,6 +15,7 @@
 
 
     <!-- Babel Standalone para compilar JSX en el navegador -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
@@ -1197,10 +1198,9 @@
         };
 
         const container = document.getElementById('root');
-        if (container) {
-            const root = ReactDOM.createRoot(container);
-            root.render(<App />);
-        }
+if (container) {
+    ReactDOM.render(<App />, container);
+}
     </script>
     
     <script>window.aichatbotApiKey="fa83dc89-93c7-43a8-883e-d3e2b48c4708"; window.aichatbotProviderId="f9e9c5e4-6d1a-4b8c-8d3f-3f9e9c5e46d1";</script><script src="https://script.chatlab.com/aichatbot.js" id="fa83dc89-93c7-43a8-883e-d3e2b48c4708" defer></script>
