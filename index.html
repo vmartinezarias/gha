@@ -12,12 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
 
     <!-- Import Map para React -->
-
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0",
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client"
+      }
+    }
+    </script>
 
     <!-- Babel Standalone para compilar JSX en el navegador -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
     <!-- Estilos -->
     <style>
@@ -383,8 +388,9 @@
     <div id="root"></div>
     
     <!-- Lógica de la aplicación incrustada directamente -->
-    <script type="text/babel">
-    const { useState, useEffect, Fragment } = React;
+    <script type="text/babel" data-type="module">
+        import React, { useState, useEffect } from 'react';
+        import { createRoot } from 'react-dom/client';
 
         /* --- DATA --- */
         const GHA_DATA = {
@@ -500,10 +506,10 @@
                         name: "Brian Bock", 
                         role: "Investigador Emérito", 
                         photo: "brian_bock.jpg", 
-                        bio: "Profesor jubilado. Estudia comportamiento, ecología, demografía y genética de poblaciones de reptiles y otras especies.", 
+                        bio: "Profesor Emérito y miembro fundador GHA. Estudia comportamiento, ecología, demografía y genética de poblaciones de reptiles y otras especies.", 
                         education: "PhD in Zoology",
                         areas: ["Zoology", "Evolutionary Biology", "Population Genetics", "Herpetology", "Animal Behavior"],
-                        profile_desc: "Brian Bock es Ph.D. y Profesor Jubilado del Instituto de Biología de la Universidad de Antioquia. Con una destacada carrera en Zoología y Biología Evolutiva, su investigación se ha centrado en desentrañar aspectos clave del comportamiento, la ecología, la demografía y la genética de poblaciones de la herpetofauna neotropical. Ha realizado aportes significativos al conocimiento de la biología de la iguana verde (Iguana iguana) y diversas especies de tortugas continentales, contribuyendo activamente a su conservación.",
+                        profile_desc: "Brian Bock es Ph.D. y Profesor emérito del Instituto de Biología de la Universidad de Antioquia. Con una destacada carrera en Zoología y Biología Evolutiva, su investigación se ha centrado en desentrañar aspectos clave del comportamiento, la ecología, la demografía y la genética de poblaciones de la herpetofauna neotropical. Ha realizado aportes significativos al conocimiento de la biología de la iguana verde (Iguana iguana) y diversas especies de tortugas continentales, contribuyendo activamente a su conservación.",
                         google_scholar: "https://www.researchgate.net/profile/Brian-Bock-3", 
                         publications: [
                             { year: 2025, title: "Life history characteristics of the Colombian Wood Turtle, Rhinoclemmys melanosterna, in the middle Magdalena River", journal: "Herpetology Notes" },
@@ -599,7 +605,21 @@
                         ]
                     },
                     { id: 'pg3', name: "Yeison Tolosa", role: "Estudiante Maestría", photo: "yeison_tolosa.jpg", bio: "Sistemática molecular y taxonomía integrativa.", link_cv: "#" },
-                    { id: 'pg4', name: "Freddy Alexander Grisales", role: "Estudiante Maestría", photo: "freddy_grisales.jpg", bio: "Biogeografía y modelos de nicho ecológico.", link_cv: "#" }
+                    { 
+                        id: 'pg4', name: "Freddy Alexander Grisales",
+                        role: "Estudiante Maestría",
+                        photo: "freddy_grisales.jpg",
+                        bio: "Ecología evolutiva y sistemática de lagartos", 
+                        education: "Biólogo (UdeA), Maestría en Biología (En curso)",
+                        areas: ["Ecología evolutiva de lagartos", "Sistemática filogenética"],
+                        profile_desc: "Es un biólogo con un interés principal en comprender los procesos evolutivos responsables de la diversidad intraespecífica e interespecífica en las lagartijas neotropicales del género Anolis. Como consultor ambiental, sus intereses también se enfocan en comprender y documentar distribuciones atípicas, así como distintas características ecológicas y de historia de vida de anfibios y reptiles",
+                        ResearchGate: "https://www.researchgate.net/profile/Freddy-Grisales-Martinez",
+                        publications: [
+                            { year: 2024, title: "View of Predation by a Brown Rainbow Boa (Epicrates maurus) on a Khaki Ameiva (Ameiva bifrontata) in Colombia", journal: "Reptiles & Amphibians" },
+                            { year: 2024, title: "PRIMER REGISTRO DEL COLORÍN SIETE COLORES (Passerina ciris) PARA LA ZONA CONTINENTAL DE SURAMÉRICA", journal: "Boletín SAO Vol. 33" },
+                            { year: 2024, title: "DISTRIBUTION RANGE EXTENSION OF THE AMAZON PYGMY GECKO Pseudogonatodes guianensis (PARKER, 1935) (SPHAERODACTYLIDAE: GEKKOTA) IN NORTHERN SOUTH AMERICA", journal: "Revista Latinoamericana de Herpetología", DOI: "10.22201/fc.25942158e.2024.2.851" }
+                        ]
+                    },
                 ],
                 undergrad: [
                     { name: "Marisol Londoño", bio: "Interés en ecología de anfibios." },
@@ -1198,9 +1218,10 @@
         };
 
         const container = document.getElementById('root');
-if (container) {
-    ReactDOM.render(<App />, container);
-}
+        if (container) {
+            const root = createRoot(container);
+            root.render(<App />);
+        }
     </script>
     
     <script>window.aichatbotApiKey="fa83dc89-93c7-43a8-883e-d3e2b48c4708"; window.aichatbotProviderId="f9e9c5e4-6d1a-4b8c-8d3f-3f9e9c5e46d1";</script><script src="https://script.chatlab.com/aichatbot.js" id="fa83dc89-93c7-43a8-883e-d3e2b48c4708" defer></script>
