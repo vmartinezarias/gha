@@ -11,17 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- Import Map para React -->
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://esm.sh/react@18.2.0",
-        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client"
-      }
-    }
-    </script>
+    <!-- React & ReactDOM (UMD Global Builds) - Más estable para un solo archivo HTML -->
+    <script crossorigin src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
 
-    <!-- Babel Standalone para compilar JSX en el navegador -->
+    <!-- Babel Standalone -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <!-- Estilos -->
@@ -388,9 +382,12 @@
     <div id="root"></div>
     
     <!-- Lógica de la aplicación incrustada directamente -->
-    <script type="text/babel" data-type="module" data-presets="env,react">
-        import React, { useState, useEffect } from 'react';
-        import { createRoot } from 'react-dom/client';
+    <!-- type="text/babel" asegura que Babel lo compile -->
+    <!-- NO usamos data-type="module" para aprovechar las variables globales de React cargadas arriba -->
+    <script type="text/babel">
+        // Extraemos las variables del objeto global window (UMD builds)
+        const { useState, useEffect } = React;
+        const { createRoot } = ReactDOM;
 
         /* --- DATA --- */
         const GHA_DATA = {
