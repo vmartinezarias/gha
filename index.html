@@ -802,10 +802,6 @@
                     <img 
                         src="hero_bg.jpg" 
                         style={{display:'none'}} 
-                        // FIX: Correctly handle the onError event.
-                        // Replaced `e.target.parentElement` with `e.currentTarget.parentElement`
-                        // and added a null check to prevent runtime errors and fix the TypeScript error
-                        // `Property 'parentElement' does not exist on type 'EventTarget'`.
                         onError={(e) => { 
                             if (e.currentTarget.parentElement) {
                                 e.currentTarget.parentElement.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x900/?jungle,reptile')"; 
